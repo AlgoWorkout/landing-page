@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Join the AlgoWorkout waitlist and be the first to know when we launch. Learn algorithmic trading through practice.">
+    <meta name="keywords" content="algorithmic trading, backtesting, trading strategies, waitlist, early access">
+    <meta name="author" content="AlgoWorkout">
+    <title>Join the Waitlist - AlgoWorkout</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Theme initialization - MUST be inline to prevent FOUC -->
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('algoworkout-theme');
+            const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+            if (theme === 'light') {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        })();
+    </script>
+</head>
+
+<body>
+    <div class="waitlist-container">
+        <div class="waitlist-card">
+            <a href="index.html" class="waitlist-logo">AlgoWorkout</a>
+
+            <!-- Form Section -->
+            <div id="form-section">
+                <h1 class="waitlist-title">Join the Waitlist</h1>
+                <p class="waitlist-subtitle">Be the first to know when we launch. Get early access to our algorithmic
+                    trading education platform.</p>
+
+                <form class="waitlist-form" id="waitlist-form" novalidate>
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                        <span class="error-message" id="name-error">Please enter your name</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                        <span class="error-message" id="email-error">Please enter a valid email address</span>
+                    </div>
+
+                    <button type="submit" class="submit-button" id="submit-btn">
+                        Join Waitlist
+                    </button>
+                </form>
+
+                <div class="waitlist-features">
+                    <p>🔒 No spam. Unsubscribe anytime.</p>
+                </div>
+            </div>
+
+            <!-- Success Message -->
+            <div class="success-message" id="success-section">
+                <div class="success-icon">🎉</div>
+                <h2 class="success-title">You're on the list!</h2>
+                <p class="success-subtitle">Thanks for joining. We'll notify you as soon as AlgoWorkout is ready for
+                    you.</p>
+            </div>
+
+            <a href="index.html" class="back-link">← Back to Homepage</a>
+        </div>
+    </div>
+
+    <script>
+        // Form validation and submission
+        const form = document.getElementById('waitlist-form');
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const nameError = document.getElementById('name-error');
+        const emailError = document.getElementById('email-error');
+        const submitBtn = document.getElementById('submit-btn');
+        const formSection = document.getElementById('form-section');
+        const successSection = document.getElementById('success-section');
+
+        // Email validation regex
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        // Clear error on input
+        nameInput.addEventListener('input', () => {
+            nameInput.classList.remove('error');
+            nameError.classList.remove('visible');
+        });
+
+        emailInput.addEventListener('input', () => {
+            emailInput.classList.remove('error');
+            emailError.classList.remove('visible');
+        });
+
+        // Form submission
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            let isValid = true;
+
+            // Validate name
+            if (!nameInput.value.trim()) {
+                nameInput.classList.add('error');
+                nameError.classList.add('visible');
+                isValid = false;
+            }
+
+            // Validate email
+            if (!emailInput.value.trim() || !emailRegex.test(emailInput.value.trim())) {
+                emailInput.classList.add('error');
+                emailError.classList.add('visible');
+                isValid = false;
+            }
+
+            if (isValid) {
+                // Disable button and show loading state
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Joining...';
+
+                // Simulate API call (replace with actual backend integration)
+                setTimeout(() => {
+                    // Hide form, show success
+                    formSection.style.display = 'none';
+                    successSection.classList.add('visible');
+
+                    // Log for debugging (remove in production)
+                    console.log('Waitlist submission:', {
+                        name: nameInput.value.trim(),
+                        email: emailInput.value.trim()
+                    });
+                }, 1000);
+            }
+        });
+    </script>
+</body>
+
+</html>
+</CodeContent>
+<parameter name="Complexity">3
