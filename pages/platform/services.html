@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="AlgoWorkout services — institutional-grade strategy validation powered by a 7-stage multi-LLM kill pipeline. Strategy generation, stress testing, walk-forward validation, and deploy reports.">
+    <title>Services — AlgoWorkout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/pages.css">
+</head>
+
+<body>
+    <div class="page-container">
+        <!-- Header -->
+        <header class="page-header">
+            <a href="../../index.html" class="page-header__logo">AlgoWorkout</a>
+            <nav class="page-header__nav">
+                <a href="services.html">Services</a>
+                <a href="access-levels.html">Access Levels</a>
+                <a href="survivors.html">Survivors</a>
+                <a href="../resources/api-docs.html">API Docs</a>
+                <a href="../../index.html" class="page-header__back">← Home</a>
+            </nav>
+        </header>
+
+        <!-- Hero -->
+        <div class="page-content">
+            <section class="page-hero">
+                <span class="page-hero__tag">What We Do</span>
+                <h1 class="page-hero__title">Institutional-Grade<br>Strategy Validation</h1>
+                <p class="page-hero__subtitle">A 7-stage multi-LLM kill pipeline that generates, tests, and deploys
+                    quantitative trading strategies. 96% are killed. You learn from the 4% that survived.</p>
+            </section>
+
+            <!-- Service Blocks -->
+            <section class="page-section">
+                <h2 class="page-section__title">Strategy Generation as a Service</h2>
+                <p class="page-section__subtitle">AI generates hundreds of quantitative trading hypotheses grounded in
+                    economic logic — not curve fitting. Every hypothesis must have a thesis, a counterparty (who loses),
+                    and an explanation of why the edge persists. Ideas are restricted to liquid instruments (SPY, QQQ,
+                    TLT, GLD, and other major ETFs) to ensure realistic execution.</p>
+            </section>
+
+            <section class="page-section">
+                <h2 class="page-section__title">Automated Kill Pipeline</h2>
+                <p class="page-section__subtitle">3 automated kill gates plus 1 human-assisted gate ruthlessly filter
+                    out weak strategies. The pipeline checks for minimum Sharpe ratio (≥ 0.5), minimum trade count (≥
+                    25), maximum drawdown thresholds, and walk-forward performance decay. Only 2–4% of generated
+                    strategies survive all gates.</p>
+                <div class="page-grid page-grid--3">
+                    <div class="page-card">
+                        <div class="page-card__title">Stage 3 — Sanity Check ☠</div>
+                        <p class="page-card__desc">Automated execution: downloads real market data, runs backtest,
+                            checks Sharpe ≥ 0.5 and minimum 25 trades. 60–80% of strategies die here.</p>
+                    </div>
+                    <div class="page-card">
+                        <div class="page-card__title">Stage 5 — Stress Test ☠</div>
+                        <p class="page-card__desc">5 hostile market scenarios: triple volatility, remove best month,
+                            crash injection, time shift, correlation breakdown. Kill if worst drawdown exceeds -50%.</p>
+                    </div>
+                    <div class="page-card">
+                        <div class="page-card__title">Stage 6 — Walk-Forward ☠</div>
+                        <p class="page-card__desc">5 years training, 1 year out-of-sample test. Kill if Sharpe decay >
+                            50% or out-of-sample Sharpe ≤ 0. This catches overfitting — the most dangerous trap.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="page-section">
+                <h2 class="page-section__title">Multi-LLM Adversarial Testing</h2>
+                <p class="page-section__subtitle">Using a single AI model creates systematic bias. Our pipeline uses 4
+                    different LLM providers — OpenAI o3 for hypothesis generation and implementation, DeepSeek Reasoner
+                    for adversarial interrogation, and Google Gemini for stress test analysis — reducing blind spots
+                    through cognitive diversity.</p>
+            </section>
+
+            <section class="page-section">
+                <h2 class="page-section__title">Stress Testing</h2>
+                <p class="page-section__subtitle">Every surviving strategy is tested against 5 hostile market scenarios
+                    designed to break it:</p>
+                <div class="page-grid page-grid--2">
+                    <div class="page-card">
+                        <div class="page-card__title">🌪️ Triple Volatility</div>
+                        <p class="page-card__desc">Amplifies all daily returns by 3× to simulate extreme market regimes.
+                        </p>
+                    </div>
+                    <div class="page-card">
+                        <div class="page-card__title">📉 Crash Injection</div>
+                        <p class="page-card__desc">Injects a 35% market drop over 5 trading days at a random point in
+                            the backtest.</p>
+                    </div>
+                    <div class="page-card">
+                        <div class="page-card__title">📅 Remove Best Month</div>
+                        <p class="page-card__desc">Strips the single best-performing month to test if returns depend on
+                            one lucky period.</p>
+                    </div>
+                    <div class="page-card">
+                        <div class="page-card__title">⏳ Time Shift</div>
+                        <p class="page-card__desc">Shifts the entire data window by 6 months to check time-period
+                            sensitivity.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="page-section">
+                <h2 class="page-section__title">Walk-Forward Validation</h2>
+                <p class="page-section__subtitle">The most important gate. Data is split: 5 years for training
+                    (2020–2025), 1 year for out-of-sample testing (2025–2026). The strategy is run on both
+                    independently. If the out-of-sample Sharpe degrades by more than 50% versus in-sample, the strategy
+                    is killed. This is the single most effective defense against overfitting — the most dangerous and
+                    common trap in quantitative trading.</p>
+            </section>
+
+            <section class="page-section">
+                <h2 class="page-section__title">Complete Audit Trail</h2>
+                <p class="page-section__subtitle">Every decision, every kill, every result is recorded in a structured
+                    <span class="code-inline">manifest.yaml</span> per strategy. You can trace exactly which gate killed
+                    a strategy, what thresholds it failed, and what the metrics looked like at time of death. Full
+                    transparency — no black boxes.</p>
+            </section>
+
+            <section class="page-section">
+                <h2 class="page-section__title">Deploy Reports</h2>
+                <p class="page-section__subtitle">Every strategy that survives all 7 stages receives a comprehensive,
+                    human-readable deploy report. The report summarizes all stage results, metrics, stress test
+                    performance, walk-forward validation, and the adversarial critique. A human reviews the report and
+                    gives final approval before the strategy moves to paper trading with minimum capital.</p>
+                <div style="text-align: center; margin-top: 2.5rem;">
+                    <a href="access-levels.html" class="cta-button">View Access Levels →</a>
+                </div>
+            </section>
+
+            <div class="disclaimer">
+                <p><strong>Disclaimer:</strong> AlgoWorkout is an educational platform. All strategies are for
+                    educational and paper-trading purposes only. Past backtest performance does not guarantee future
+                    results. This is not financial advice.</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="page-footer">
+            <div class="footer-content">
+                <div>
+                    <div class="footer-brand">AlgoWorkout</div>
+                    <p class="footer-description">Institutional-grade strategy validation. Powered by The Strategy
+                        Grinder — a 7-stage Multi-LLM kill pipeline.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Platform</h4>
+                    <ul>
+                        <li><a href="../../index.html#engine">The Engine</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="access-levels.html">Access Levels</a></li>
+                        <li><a href="survivors.html">Survivors</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="../resources/api-docs.html">API Docs</a></li>
+                        <li><a href="../resources/kill-reports.html">Kill Reports</a></li>
+                        <li><a href="../resources/graveyard.html">The Graveyard</a></li>
+                        <li><a href="../resources/support.html">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="../company/about.html">About</a></li>
+                        <li><a href="../company/contact.html">Contact</a></li>
+                        <li><a href="../company/privacy.html">Privacy</a></li>
+                        <li><a href="../company/terms.html">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>© 2026 AlgoWorkout. All rights reserved.</div>
+                <div>Powered by The Strategy Grinder 🔥</div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

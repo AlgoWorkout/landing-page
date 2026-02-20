@@ -105,7 +105,7 @@
         });
 
         // Form submission
-        form.addEventListener('submit', (e) => {
+        form.addEventListener('submit', async (e) => {
             e.preventDefault();
 
             let isValid = true;
@@ -129,23 +129,44 @@
                 submitBtn.disabled = true;
                 submitBtn.textContent = 'Joining...';
 
-                // Simulate API call (replace with actual backend integration)
-                setTimeout(() => {
-                    // Hide form, show success
+                try {
+                    await window.submitToWaitlist(nameInput.value.trim(), emailInput.value.trim());
                     formSection.style.display = 'none';
                     successSection.classList.add('visible');
-
-                    // Log for debugging (remove in production)
-                    console.log('Waitlist submission:', {
-                        name: nameInput.value.trim(),
-                        email: emailInput.value.trim()
-                    });
-                }, 1000);
+                } catch (err) {
+                    console.error('Submission failed:', err);
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Join Waitlist';
+                    alert('Something went wrong. Please try again.');
+                }
             }
         });
+    </script>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js";
+        import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-firestore.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyDNsy9hcL6XbaKF-mvLsoneTTQ4Gb8QwvY",
+            authDomain: "algoworkout-50bf5.firebaseapp.com",
+            projectId: "algoworkout-50bf5",
+            storageBucket: "algoworkout-50bf5.firebasestorage.app",
+            messagingSenderId: "310483016588",
+            appId: "1:310483016588:web:28321415637de1b160d4a9",
+            measurementId: "G-BB8WHG32FJ"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        window.submitToWaitlist = async (name, email) => {
+            await addDoc(collection(db, "waitlist"), {
+                name: name,
+                email: email,
+                timestamp: serverTimestamp()
+            });
+        };
     </script>
 </body>
 
 </html>
-</CodeContent>
-<parameter name="Complexity">3

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="AlgoWorkout kill reports — every killed strategy gets a detailed post-mortem. See which gate killed it, what thresholds it failed, and the full audit trail.">
+    <title>Kill Reports — AlgoWorkout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/pages.css">
+</head>
+
+<body>
+    <div class="page-container">
+        <!-- Header -->
+        <header class="page-header">
+            <a href="../../index.html" class="page-header__logo">AlgoWorkout</a>
+            <nav class="page-header__nav">
+                <a href="api-docs.html">API Docs</a>
+                <a href="kill-reports.html">Kill Reports</a>
+                <a href="graveyard.html">Graveyard</a>
+                <a href="support.html">Support</a>
+                <a href="../../index.html" class="page-header__back">← Home</a>
+            </nav>
+        </header>
+
+        <div class="page-content">
+            <!-- Hero -->
+            <section class="page-hero">
+                <span class="page-hero__tag">Transparency</span>
+                <h1 class="page-hero__title">Kill Reports</h1>
+                <p class="page-hero__subtitle">Every killed strategy gets a detailed post-mortem. Which gate killed it,
+                    what thresholds it failed, the specific metrics at time of death, and the full audit trail.</p>
+            </section>
+
+            <!-- Explanation -->
+            <section class="page-section">
+                <h2 class="page-section__title">What's in a Kill Report?</h2>
+                <p class="page-section__subtitle">When a strategy is killed at any stage, the system records the
+                    complete context: the kill gate, the specific threshold that was breached, all metrics at the moment
+                    of death, the LLM critique (if at the interrogation stage), and every prior stage result. The result
+                    is a structured <span class="code-inline">manifest.yaml</span> file that serves as a complete
+                    forensic audit trail.</p>
+            </section>
+
+            <!-- Example Kill Reports -->
+            <section class="page-section">
+                <h2 class="page-section__title">Example Kill Reports</h2>
+                <div class="page-grid" style="grid-template-columns: 1fr; gap: 1.5rem;">
+
+                    <!-- Kill Report 1 -->
+                    <div class="kill-card">
+                        <div class="kill-card__header">
+                            <div class="kill-card__name">Overnight Gap Reversal</div>
+                            <span class="kill-card__stage kill-card__stage--3">KILLED AT STAGE 3 — SANITY CHECK</span>
+                        </div>
+                        <p class="kill-card__reason"><strong>Reason:</strong> Sharpe ratio 0.21 (threshold: ≥ 0.5). Only
+                            12 trades over 5 years (threshold: ≥ 25). The strategy generated too few signals to be
+                            statistically meaningful. The hypothesis assumed overnight gaps would revert by market open,
+                            but in liquid ETFs the gap-fill rate is too inconsistent to build a systematic edge.</p>
+                        <div class="kill-card__metrics">
+                            <div class="kill-card__metric">Sharpe: <span>0.21</span></div>
+                            <div class="kill-card__metric">Trades: <span>12</span></div>
+                            <div class="kill-card__metric">Max DD: <span>-8.3%</span></div>
+                            <div class="kill-card__metric">Annual Return: <span>+3.2%</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Kill Report 2 -->
+                    <div class="kill-card">
+                        <div class="kill-card__header">
+                            <div class="kill-card__name">RSI Mean Reversion on QQQ</div>
+                            <span class="kill-card__stage kill-card__stage--4">KILLED AT STAGE 4 — THE
+                                INTERROGATION</span>
+                        </div>
+                        <p class="kill-card__reason"><strong>Verdict: KILL.</strong> The adversarial LLM (DeepSeek
+                            Reasoner) identified 3 critical issues: (1) look-ahead bias — the RSI was calculated using
+                            close price before market close; (2) overfitting — 7 tuned parameters for only 31 trades is
+                            a recipe for curve fitting; (3) regime dependence — the strategy only works in
+                            low-volatility bull markets and would have been destroyed in 2022.</p>
+                        <div class="kill-card__metrics">
+                            <div class="kill-card__metric">Sharpe: <span>1.42</span></div>
+                            <div class="kill-card__metric">Trades: <span>31</span></div>
+                            <div class="kill-card__metric">Parameters: <span>7</span></div>
+                            <div class="kill-card__metric">Issues: <span>3 CRITICAL</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Kill Report 3 -->
+                    <div class="kill-card">
+                        <div class="kill-card__header">
+                            <div class="kill-card__name">Pairs Trading SPY/IWM</div>
+                            <span class="kill-card__stage kill-card__stage--6">KILLED AT STAGE 6 — WALK-FORWARD</span>
+                        </div>
+                        <p class="kill-card__reason"><strong>Reason:</strong> In-sample Sharpe 1.89, out-of-sample
+                            Sharpe 0.34. Walk-forward decay: 82% (threshold: ≤ 50%). Classic overfitting — the spread
+                            relationship between SPY and IWM that existed in the training window (2020–2025) broke down
+                            during the test period (2025–2026). The strategy was fitting to a temporary correlation
+                            structure, not a persistent economic relationship.</p>
+                        <div class="kill-card__metrics">
+                            <div class="kill-card__metric">In-sample Sharpe: <span>1.89</span></div>
+                            <div class="kill-card__metric">Out-of-sample Sharpe: <span>0.34</span></div>
+                            <div class="kill-card__metric">Decay: <span>82%</span></div>
+                            <div class="kill-card__metric">Max DD (OOS): <span>-28.1%</span></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Why Transparency Matters -->
+            <section class="page-section">
+                <h2 class="page-section__title">Why We Publish Kill Reports</h2>
+                <p class="page-section__subtitle">Every killed strategy teaches you something about what doesn't work in
+                    markets. A strategy killed at Stage 3 for insufficient Sharpe is a lesson in signal strength. A
+                    strategy killed at Stage 4 by an adversarial LLM is a lesson in bias detection. A strategy killed at
+                    Stage 6 by walk-forward validation is a lesson in overfitting. The graveyard is the curriculum — the
+                    survivors are the graduation.</p>
+            </section>
+
+            <div class="disclaimer">
+                <p><strong>Note:</strong> Builder and Institutional users get full access to kill reports including the
+                    generated Python backtest code, complete manifests, LLM critiques, and audit trails. Explorer users
+                    can view summary-level kill reports.</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="page-footer">
+            <div class="footer-content">
+                <div>
+                    <div class="footer-brand">AlgoWorkout</div>
+                    <p class="footer-description">Institutional-grade strategy validation. Powered by The Strategy
+                        Grinder — a 7-stage Multi-LLM kill pipeline.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Platform</h4>
+                    <ul>
+                        <li><a href="../../index.html#engine">The Engine</a></li>
+                        <li><a href="../platform/services.html">Services</a></li>
+                        <li><a href="../platform/access-levels.html">Access Levels</a></li>
+                        <li><a href="../platform/survivors.html">Survivors</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="api-docs.html">API Docs</a></li>
+                        <li><a href="kill-reports.html">Kill Reports</a></li>
+                        <li><a href="graveyard.html">The Graveyard</a></li>
+                        <li><a href="support.html">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="../company/about.html">About</a></li>
+                        <li><a href="../company/contact.html">Contact</a></li>
+                        <li><a href="../company/privacy.html">Privacy</a></li>
+                        <li><a href="../company/terms.html">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>© 2026 AlgoWorkout. All rights reserved.</div>
+                <div>Powered by The Strategy Grinder 🔥</div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

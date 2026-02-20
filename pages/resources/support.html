@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="AlgoWorkout support center — FAQ, help articles, and contact information. Get answers about the kill pipeline, API access, billing, and more.">
+    <title>Support — AlgoWorkout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/pages.css">
+</head>
+
+<body>
+    <div class="page-container">
+        <!-- Header -->
+        <header class="page-header">
+            <a href="../../index.html" class="page-header__logo">AlgoWorkout</a>
+            <nav class="page-header__nav">
+                <a href="api-docs.html">API Docs</a>
+                <a href="kill-reports.html">Kill Reports</a>
+                <a href="graveyard.html">Graveyard</a>
+                <a href="support.html">Support</a>
+                <a href="../../index.html" class="page-header__back">← Home</a>
+            </nav>
+        </header>
+
+        <div class="page-content">
+            <!-- Hero -->
+            <section class="page-hero">
+                <span class="page-hero__tag">Help Center</span>
+                <h1 class="page-hero__title">Support Center</h1>
+                <p class="page-hero__subtitle">Answers to common questions about AlgoWorkout, the kill pipeline, API
+                    access, and billing.</p>
+            </section>
+
+            <!-- FAQ -->
+            <section class="page-section">
+                <h2 class="page-section__title">Frequently Asked Questions</h2>
+
+                <div class="faq-item">
+                    <div class="faq-item__question">What is AlgoWorkout?</div>
+                    <p class="faq-item__answer">AlgoWorkout is an educational algorithmic trading platform powered by
+                        The Strategy Grinder — a fully automated, 7-stage AI pipeline that generates, tests, and deploys
+                        quantitative trading strategies. The core philosophy: destroy the strategy with tests. If it
+                        survives, allocate small capital.</p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-item__question">How does the kill pipeline work?</div>
+                    <p class="faq-item__answer">The pipeline has 7 stages: (1) Hypothesis Generation (OpenAI o3), (2)
+                        Implementation (OpenAI o3 writes Python backtest), (3) Sanity Check kill gate (Sharpe ≥ 0.5, ≥
+                        25 trades), (4) Adversarial Interrogation (DeepSeek Reasoner attacks assumptions), (5) Stress
+                        Test kill gate (5 hostile scenarios, max drawdown -50%), (6) Walk-Forward kill gate
+                        (out-of-sample validation, max 50% Sharpe decay), (7) Deploy with human review. Expected
+                        survival rate: 2–4%.</p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-item__question">What does it mean when a strategy is "killed"?</div>
+                    <p class="faq-item__answer">A killed strategy failed one of the automated or human-reviewed quality
+                        gates. It's moved to the Graveyard with a complete kill report: which gate killed it, what
+                        threshold it failed, the specific metrics at time of death, and the full audit trail up to that
+                        point.</p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-item__question">Can I re-run a killed strategy?</div>
+                    <p class="faq-item__answer">No. Killed strategies are permanently archived. Re-running a failed
+                        hypothesis would be curve fitting — the same trap the pipeline is designed to prevent. You can
+                        inspect the kill report to understand why it failed and generate new hypotheses instead.</p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-item__question">What LLMs do you use?</div>
+                    <p class="faq-item__answer">4 providers: OpenAI (o3) for hypothesis generation and implementation,
+                        DeepSeek Reasoner for adversarial interrogation, Google Gemini for stress test analysis, and
+                        Anthropic Claude for supplementary critique. Different models for different stages reduces
+                        systematic AI bias.</p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-item__question">Is this financial advice?</div>
+                    <p class="faq-item__answer">No. AlgoWorkout is an educational platform. All strategies are for paper
+                        trading and educational purposes only. Past backtest performance does not guarantee future
+                        results. You are solely responsible for your own trading decisions.</p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-item__question">How do I get API access?</div>
+                    <p class="faq-item__answer">API access is available on Builder ($49/month, read-only) and
+                        Institutional (custom pricing, read + write) plans. See <a href="../platform/access-levels.html"
+                            style="color: var(--primary);">Access Levels</a> for details.</p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-item__question">What data sources do you use?</div>
+                    <p class="faq-item__answer">Market data from Yahoo Finance (yfinance). OHLCV data for liquid ETFs:
+                        SPY, QQQ, TLT, GLD, IWM, EFA, and others in the pre-approved universe. Institutional plans can
+                        configure custom tickers.</p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-item__question">Can I use my own strategies?</div>
+                    <p class="faq-item__answer">On Builder (5 strategies/month) and Institutional (unlimited) plans, you
+                        can submit your own hypotheses to be tested through the full 7-stage pipeline.</p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-item__question">How do I cancel my subscription?</div>
+                    <p class="faq-item__answer">Email <a href="mailto:support@algoworkout.com"
+                            style="color: var(--primary);">support@algoworkout.com</a> or go to Account Settings.
+                        Cancellation takes effect at the end of your current billing period. No refunds for partial
+                        months.</p>
+                </div>
+            </section>
+
+            <!-- Contact Support -->
+            <section class="page-section">
+                <h2 class="page-section__title">Contact Support</h2>
+                <div class="contact-info">
+                    <div class="contact-info__item">
+                        <div class="contact-info__icon">📧</div>
+                        <div class="contact-info__label">Email</div>
+                        <div class="contact-info__value"><a
+                                href="mailto:support@algoworkout.com">support@algoworkout.com</a></div>
+                    </div>
+                    <div class="contact-info__item">
+                        <div class="contact-info__icon">⏱️</div>
+                        <div class="contact-info__label">Response Time</div>
+                        <div class="contact-info__value">24-48h Builder · 4h Institutional</div>
+                    </div>
+                    <div class="contact-info__item">
+                        <div class="contact-info__icon">💬</div>
+                        <div class="contact-info__label">Community</div>
+                        <div class="contact-info__value"><a href="#">Discord Server</a></div>
+                    </div>
+                    <div class="contact-info__item">
+                        <div class="contact-info__icon">📊</div>
+                        <div class="contact-info__label">System Status</div>
+                        <div class="contact-info__value"><a href="#">status.algoworkout.com</a></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Footer -->
+        <footer class="page-footer">
+            <div class="footer-content">
+                <div>
+                    <div class="footer-brand">AlgoWorkout</div>
+                    <p class="footer-description">Institutional-grade strategy validation. Powered by The Strategy
+                        Grinder — a 7-stage Multi-LLM kill pipeline.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Platform</h4>
+                    <ul>
+                        <li><a href="../../index.html#engine">The Engine</a></li>
+                        <li><a href="../platform/services.html">Services</a></li>
+                        <li><a href="../platform/access-levels.html">Access Levels</a></li>
+                        <li><a href="../platform/survivors.html">Survivors</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="api-docs.html">API Docs</a></li>
+                        <li><a href="kill-reports.html">Kill Reports</a></li>
+                        <li><a href="graveyard.html">The Graveyard</a></li>
+                        <li><a href="support.html">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="../company/about.html">About</a></li>
+                        <li><a href="../company/contact.html">Contact</a></li>
+                        <li><a href="../company/privacy.html">Privacy</a></li>
+                        <li><a href="../company/terms.html">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>© 2026 AlgoWorkout. All rights reserved.</div>
+                <div>Powered by The Strategy Grinder 🔥</div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

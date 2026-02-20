@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="AlgoWorkout Terms of Service — usage terms, liability limitations, and the important disclaimer that this is an educational platform, not financial advice.">
+    <title>Terms of Service — AlgoWorkout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/pages.css">
+</head>
+
+<body>
+    <div class="page-container">
+        <!-- Header -->
+        <header class="page-header">
+            <a href="../../index.html" class="page-header__logo">AlgoWorkout</a>
+            <nav class="page-header__nav">
+                <a href="../platform/services.html">Services</a>
+                <a href="../platform/access-levels.html">Access Levels</a>
+                <a href="../platform/survivors.html">Survivors</a>
+                <a href="../resources/api-docs.html">API Docs</a>
+                <a href="../../index.html" class="page-header__back">← Home</a>
+            </nav>
+        </header>
+
+        <!-- Hero -->
+        <div class="page-content page-content--narrow">
+            <section class="page-hero">
+                <span class="page-hero__tag">Legal</span>
+                <h1 class="page-hero__title">Terms of Service</h1>
+                <p class="page-hero__subtitle">Effective date: February 19, 2026. Please read these terms carefully
+                    before using AlgoWorkout.</p>
+            </section>
+
+            <!-- Legal Content -->
+            <div class="legal-content">
+
+                <h2>1. Acceptance of Terms</h2>
+                <p>By accessing or using AlgoWorkout, you agree to be bound by these Terms of Service. If you do not
+                    agree to these terms, do not use the platform. These terms apply to all users, including visitors,
+                    free-tier users, and paid subscribers.</p>
+
+                <h2>2. Service Description</h2>
+                <p>AlgoWorkout is an <strong>educational algorithmic trading platform</strong>. We provide AI-generated
+                    strategy hypotheses, automated multi-stage validation through The Strategy Grinder pipeline, kill
+                    reports, stress testing results, walk-forward validation, and educational content about quantitative
+                    trading.</p>
+                <p>The platform is powered by a 7-stage pipeline using multiple LLM providers (OpenAI, DeepSeek,
+                    Anthropic, Google) for strategy generation, critique, and analysis.</p>
+
+                <div class="disclaimer">
+                    <p><strong>⚠️ THIS IS NOT FINANCIAL ADVICE</strong></p>
+                </div>
+
+                <h2>3. Not Financial Advice</h2>
+                <p><strong>This is the most important section of these terms.</strong></p>
+                <p>AlgoWorkout is for <strong>educational purposes only</strong>. Nothing on this platform constitutes
+                    financial advice, investment recommendations, or solicitation to buy, sell, or hold any financial
+                    instrument. Specifically:</p>
+                <ul>
+                    <li>All strategies displayed on AlgoWorkout are <strong>hypothetical</strong></li>
+                    <li>Past backtest performance does <strong>NOT</strong> guarantee future results</li>
+                    <li>Surviving the 7-stage pipeline does <strong>NOT</strong> mean a strategy will be profitable in
+                        live trading</li>
+                    <li>"Survivor" strategies are educational examples — not trade recommendations</li>
+                    <li>Kill reports and graveyard data are for learning purposes only</li>
+                </ul>
+                <p><strong>You are solely responsible for your own trading and investment decisions.</strong>
+                    AlgoWorkout,
+                    its founders, employees, and affiliates bear no responsibility for any financial losses you may
+                    incur
+                    from trading based on information found on this platform.</p>
+                <p>If you need financial advice, consult a licensed financial advisor.</p>
+
+                <h2>4. Account Responsibility</h2>
+                <p>You are responsible for maintaining the security of your account credentials. Keep your password and
+                    API keys confidential. You must:</p>
+                <ul>
+                    <li>Provide accurate information when creating your account</li>
+                    <li>Maintain one account per person — multiple accounts are not permitted</li>
+                    <li>Notify us immediately at <strong>support@algoworkout.com</strong> if you suspect unauthorized
+                        access</li>
+                    <li>Not share your account credentials or API keys with others</li>
+                </ul>
+
+                <h2>5. Acceptable Use</h2>
+                <p>You agree not to:</p>
+                <ul>
+                    <li><strong>Reverse engineer</strong> the pipeline — do not attempt to extract, reconstruct, or
+                        replicate The Strategy Grinder's architecture, prompts, or orchestration logic</li>
+                    <li><strong>Extract LLM prompts</strong> — do not attempt to recover the system prompts used at any
+                        pipeline stage through prompt injection or other techniques</li>
+                    <li><strong>Automated scraping</strong> — do not scrape, crawl, or programmatically extract data
+                        from the platform outside of the provided API</li>
+                    <li><strong>Resell pipeline results</strong> — do not resell, redistribute, or commercially
+                        repackage pipeline results, kill reports, or strategy data without written permission</li>
+                    <li><strong>Abuse the API</strong> — do not exceed rate limits, flood endpoints, or use the API in
+                        any way that degrades service for other users</li>
+                    <li><strong>Misrepresent</strong> — do not present AlgoWorkout results as personal research or claim
+                        pipeline-generated strategies as your own proprietary work in a commercial context</li>
+                </ul>
+
+                <h2>6. Intellectual Property</h2>
+                <p>The Strategy Grinder pipeline — including its code, prompts, multi-LLM orchestration architecture,
+                    stage configurations, and kill gate logic — is proprietary to AlgoWorkout.</p>
+                <p>Strategies generated for your account through your pipeline runs are yours to use for personal
+                    educational and trading purposes. However, the underlying pipeline technology, the platform's
+                    codebase, and the AlgoWorkout brand remain the intellectual property of AlgoWorkout Ltd.</p>
+                <p>The educational content, kill reports, and graveyard data published by AlgoWorkout on the platform
+                    are
+                    owned by AlgoWorkout and may not be reproduced in bulk without permission.</p>
+
+                <h2>7. API Usage</h2>
+                <p>API access is available on Builder and Institutional plans, subject to the following:</p>
+                <ul>
+                    <li><strong>Rate limits</strong> — 100 requests/hour for Builder, unlimited for Institutional</li>
+                    <li><strong>Authentication</strong> — all API requests must include a valid Bearer token</li>
+                    <li><strong>Fair use</strong> — API usage must be consistent with normal platform usage patterns
+                    </li>
+                    <li><strong>Abuse</strong> — excessive or abusive API usage will result in rate limiting, temporary
+                        suspension, or permanent revocation of API access</li>
+                </ul>
+                <p>See the <a href="../resources/api-docs.html" style="color: var(--primary);">API Documentation</a> for
+                    full technical details.</p>
+
+                <h2>8. Payment & Billing</h2>
+                <p>Paid plans are billed monthly through Stripe. By subscribing, you agree to:</p>
+                <ul>
+                    <li>Monthly recurring billing at the rate displayed at time of subscription</li>
+                    <li>Automatic renewal unless you cancel before the next billing cycle</li>
+                    <li>No refunds for partial months — you retain access until the end of your current billing period
+                    </li>
+                    <li>Price changes will be communicated at least 30 days in advance</li>
+                </ul>
+                <p>You can cancel your subscription at any time by emailing <strong>support@algoworkout.com</strong> or
+                    through your Account Settings.</p>
+
+                <h2>9. Limitation of Liability</h2>
+                <p><strong>AlgoWorkout is not responsible for any trading losses.</strong> The platform is educational.
+                    We make no guarantees about:</p>
+                <ul>
+                    <li>The future performance of any strategy, whether it survived the pipeline or not</li>
+                    <li>The accuracy of backtest results (backtests use historical data and simplified assumptions)</li>
+                    <li>The completeness of kill reports or adversarial critiques</li>
+                    <li>Continuous, uninterrupted access to the platform or API</li>
+                </ul>
+                <p>To the maximum extent permitted by law, AlgoWorkout's total liability to you for any claims arising
+                    from your use of the platform is limited to the amount you paid us in the 12 months preceding the
+                    claim.</p>
+
+                <h2>10. Termination</h2>
+                <p>We may terminate or suspend your account if you:</p>
+                <ul>
+                    <li>Violate these Terms of Service</li>
+                    <li>Engage in abusive behavior toward other users or our team</li>
+                    <li>Attempt to reverse engineer, scrape, or extract proprietary pipeline components</li>
+                    <li>Use the platform for any illegal purpose</li>
+                </ul>
+                <p>You may delete your account at any time. Upon termination, your access to the platform will cease
+                    immediately. Data retention follows the terms outlined in our <a href="privacy.html"
+                        style="color: var(--primary);">Privacy Policy</a>.</p>
+
+                <h2>11. Governing Law</h2>
+                <p>These terms are governed by the laws of <strong>England and Wales, United Kingdom</strong>. Any
+                    disputes arising from these terms will be subject to the exclusive jurisdiction of the courts of
+                    England and Wales.</p>
+
+                <h2>12. Changes to These Terms</h2>
+                <p>We may update these terms from time to time. Material changes will be communicated via email at least
+                    14 days before taking effect. Continued use of AlgoWorkout after changes take effect constitutes
+                    acceptance of the updated terms.</p>
+
+                <h2>13. Contact</h2>
+                <p>Questions about these terms? Email us at <strong>legal@algoworkout.com</strong>.</p>
+                <p>AlgoWorkout Ltd.<br>London, United Kingdom</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="page-footer">
+            <div class="footer-content">
+                <div>
+                    <div class="footer-brand">AlgoWorkout</div>
+                    <p class="footer-description">Institutional-grade strategy validation. Powered by The Strategy
+                        Grinder — a 7-stage Multi-LLM kill pipeline.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Platform</h4>
+                    <ul>
+                        <li><a href="../../index.html#engine">The Engine</a></li>
+                        <li><a href="../platform/services.html">Services</a></li>
+                        <li><a href="../platform/access-levels.html">Access Levels</a></li>
+                        <li><a href="../platform/survivors.html">Survivors</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="../resources/api-docs.html">API Docs</a></li>
+                        <li><a href="../resources/kill-reports.html">Kill Reports</a></li>
+                        <li><a href="../resources/graveyard.html">The Graveyard</a></li>
+                        <li><a href="../resources/support.html">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy.html">Privacy</a></li>
+                        <li><a href="terms.html">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>© 2026 AlgoWorkout. All rights reserved.</div>
+                <div>Powered by The Strategy Grinder 🔥</div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

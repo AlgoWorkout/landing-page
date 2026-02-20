@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Learn algorithmic trading through practice with AlgoWorkout. Real backtesting, educational insights, and portfolio analytics. Free forever tier available.">
+        content="Learn algorithmic trading from strategies that survived a 7-stage AI gauntlet. Real backtesting, institutional-grade validation, and portfolio analytics.">
     <meta name="keywords"
-        content="algorithmic trading, backtesting, trading strategies, portfolio analytics, learn trading">
+        content="algorithmic trading, backtesting, trading strategies, portfolio analytics, stress testing, AI trading">
     <meta name="author" content="AlgoWorkout">
-    <title>AlgoWorkout - Learn Algorithmic Trading Through Practice</title>
+    <title>AlgoWorkout - Battle-Tested Algorithmic Trading Education</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,12 +38,15 @@
     <div class="container">
         <!-- Navigation -->
         <nav>
-            <div class="logo">AlgoWorkout</div>
+            <div class="logo">
+                <img src="assets/images/logo_algoworkout.png" alt="AlgoWorkout Logo" class="logo-icon">
+                <span>AlgoWorkout</span>
+            </div>
             <ul class="nav-links">
-                <li><a href="#features">Features</a></li>
-                <li><a href="#strategies">Strategies</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#learn">Learn</a></li>
+                <li><a href="#engine">The Engine</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#strategies">Survivors</a></li>
+                <li><a href="#pricing">Access Levels</a></li>
                 <li><a href="#" class="cta-button">Start Free</a></li>
                 <li>
                     <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
@@ -56,12 +59,12 @@
 
         <!-- Hero Section -->
         <section class="hero">
-            <h1>Master Trading Strategies<br />Through <span class="gradient-text">Hands-On Practice</span></h1>
-            <p>Learn algorithmic trading with real backtesting, educational insights, and portfolio analytics. No
-                confusion. No expensive courses. Just results.</p>
+            <h1>Don't Just Backtest.<br /><span class="gradient-text">Stress Test.</span></h1>
+            <p>Every strategy on AlgoWorkout survived a 7-stage AI gauntlet. 96% were killed.
+                You're learning from the 4% that didn't break.</p>
             <div class="hero-cta">
                 <a href="#" class="cta-button">Start Learning Free</a>
-                <a href="#" class="secondary-button">View Demo Strategy →</a>
+                <a href="#engine" class="secondary-button">See The Engine →</a>
                 <a href="waitlist.html" class="waitlist-button">🚀 Join Waitlist</a>
             </div>
         </section>
@@ -69,77 +72,197 @@
         <!-- Stats -->
         <div class="stats">
             <div class="stat">
-                <div class="stat-value">FREE</div>
-                <div class="stat-label">Forever Free Tier</div>
+                <div class="stat-value">96%</div>
+                <div class="stat-label">Kill Rate</div>
             </div>
             <div class="stat">
-                <div class="stat-value">10+</div>
-                <div class="stat-label">Pre-Built Strategies</div>
+                <div class="stat-value">7</div>
+                <div class="stat-label">Pipeline Stages</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">4</div>
+                <div class="stat-label">LLM Models</div>
             </div>
             <div class="stat">
                 <div class="stat-value">5</div>
-                <div class="stat-label">Backtests Daily (Free)</div>
-            </div>
-            <div class="stat">
-                <div class="stat-value">5yr</div>
-                <div class="stat-label">Historical Data</div>
+                <div class="stat-label">Stress Scenarios</div>
             </div>
         </div>
+
+        <!-- The Engine Section -->
+        <section class="section" id="engine">
+            <div class="section-header">
+                <span class="section-tag">The Engine</span>
+                <h2 class="section-title">Powered by<br />The Strategy Grinder</h2>
+                <p class="section-description">A 7-stage Multi-LLM pipeline with a kill-first philosophy.
+                    Strategies enter. Most don't survive.</p>
+            </div>
+
+            <!-- Pipeline Visualization — Vertical Funnel -->
+            <div class="funnel-wrapper">
+                <!-- Row 1: Strategies Enter (100%) -->
+                <div class="funnel-bar funnel-bar--enter" style="width: 100%;">
+                    <div class="funnel-bar__left">
+                        <div class="funnel-bar__icon">🎲</div>
+                        <div class="funnel-bar__text">
+                            <span class="funnel-bar__title">Strategies Enter</span>
+                            <span class="funnel-bar__subtitle">AI-generated hypotheses</span>
+                        </div>
+                    </div>
+                    <div class="funnel-bar__right">
+                        <span class="funnel-bar__count funnel-bar__count--enter">100</span>
+                    </div>
+                </div>
+
+                <div class="funnel-connector funnel-connector--red"></div>
+
+                <!-- Row 2: Sanity Check (85%) -->
+                <div class="funnel-bar funnel-bar--kill-1" style="width: 85%;">
+                    <div class="funnel-bar__left">
+                        <div class="funnel-bar__icon">✅</div>
+                        <div class="funnel-bar__text">
+                            <span class="funnel-bar__title">Sanity Check</span>
+                            <span class="funnel-bar__subtitle">Parameter validation, viability gates</span>
+                        </div>
+                    </div>
+                    <div class="funnel-bar__right">
+                        <span class="funnel-bar__kill-badge">−38 killed</span>
+                        <span class="funnel-bar__count funnel-bar__count--kill">62</span>
+                    </div>
+                </div>
+
+                <div class="funnel-connector funnel-connector--red"></div>
+
+                <!-- Row 3: The Interrogation (70%) -->
+                <div class="funnel-bar funnel-bar--kill-2" style="width: 70%;">
+                    <div class="funnel-bar__left">
+                        <div class="funnel-bar__icon">❓</div>
+                        <div class="funnel-bar__text">
+                            <span class="funnel-bar__title">The Interrogation</span>
+                            <span class="funnel-bar__subtitle">3 LLMs attack every assumption</span>
+                        </div>
+                    </div>
+                    <div class="funnel-bar__right">
+                        <span class="funnel-bar__kill-badge">−24 killed</span>
+                        <span class="funnel-bar__count funnel-bar__count--kill">38</span>
+                    </div>
+                </div>
+
+                <div class="funnel-connector funnel-connector--red"></div>
+
+                <!-- Row 4: Stress Test (55%) -->
+                <div class="funnel-bar funnel-bar--kill-3" style="width: 55%;">
+                    <div class="funnel-bar__left">
+                        <div class="funnel-bar__icon">💥</div>
+                        <div class="funnel-bar__text">
+                            <span class="funnel-bar__title">Stress Test</span>
+                            <span class="funnel-bar__subtitle">Crash injection, volatility spikes</span>
+                        </div>
+                    </div>
+                    <div class="funnel-bar__right">
+                        <span class="funnel-bar__kill-badge">−18 killed</span>
+                        <span class="funnel-bar__count funnel-bar__count--kill">20</span>
+                    </div>
+                </div>
+
+                <div class="funnel-connector funnel-connector--red"></div>
+
+                <!-- Row 5: Walk-Forward (40%) -->
+                <div class="funnel-bar funnel-bar--kill-4" style="width: 40%;">
+                    <div class="funnel-bar__left">
+                        <div class="funnel-bar__icon">🔄</div>
+                        <div class="funnel-bar__text">
+                            <span class="funnel-bar__title">Walk-Forward</span>
+                            <span class="funnel-bar__subtitle">Rolling windows, no future leak</span>
+                        </div>
+                    </div>
+                    <div class="funnel-bar__right">
+                        <span class="funnel-bar__kill-badge">−12 killed</span>
+                        <span class="funnel-bar__count funnel-bar__count--kill">8</span>
+                    </div>
+                </div>
+
+                <div class="funnel-connector funnel-connector--green"></div>
+
+                <!-- Row 6: Survivors (27%) -->
+                <div class="funnel-bar funnel-bar--survivor" style="width: 27%;">
+                    <div class="funnel-bar__left">
+                        <div class="funnel-bar__icon">🏆</div>
+                        <div class="funnel-bar__text">
+                            <span class="funnel-bar__title">Survivors</span>
+                            <span class="funnel-bar__subtitle">Only the top 4% make it to AlgoWorkout</span>
+                        </div>
+                    </div>
+                    <div class="funnel-bar__right">
+                        <span class="funnel-bar__count funnel-bar__count--survivor">4</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Engine Quote -->
+            <blockquote class="engine-quote">
+                "Destroy the strategy with tests. If it survives, allocate capital."
+            </blockquote>
+            <p class="engine-tech">
+                Orchestrated by <span>OpenAI o3</span> · <span>DeepSeek Reasoner</span> · <span>Gemini</span>
+            </p>
+        </section>
 
         <!-- Features Section -->
         <section class="section" id="features">
             <div class="section-header">
-                <span class="section-tag">Why AlgoWorkout?</span>
-                <h2 class="section-title">Trading Education That<br />Actually Makes Sense</h2>
-                <p class="section-description">We're not QuantConnect. We don't overwhelm you. We teach you algorithmic
-                    trading through clear explanations and real practice.</p>
+                <span class="section-tag">Institutional-Quality Education</span>
+                <h2 class="section-title">Not Just Theory.<br />Battle-Tested Practice.</h2>
+                <p class="section-description">Every feature is built on the same validation pipeline used by
+                    quantitative hedge funds. We just made it accessible.</p>
             </div>
 
             <div class="features-grid">
                 <div class="feature-card fade-in">
-                    <div class="feature-icon">📚</div>
-                    <h3 class="feature-title">Pre-Built Strategy Library</h3>
-                    <p class="feature-description">Every strategy comes with full explanations: what it is, when it
-                        works, when it fails, and why. Learn from real examples like Moving Average Crossover, RSI Mean
-                        Reversion, and Momentum strategies.</p>
+                    <div class="feature-icon">🛡️</div>
+                    <h3 class="feature-title">Battle-Tested Strategy Library</h3>
+                    <p class="feature-description">Every strategy survived the full 7-stage gauntlet. Learn from
+                        survivors — not untested theories. Each comes with full explanations: what it is, when it works,
+                        when it fails, and why the Grinder couldn't kill it.</p>
                 </div>
 
                 <div class="feature-card fade-in">
-                    <div class="feature-icon">🎯</div>
-                    <h3 class="feature-title">Guided Backtesting Flow</h3>
-                    <p class="feature-description">Step-by-step wizard walks you through choosing stocks, selecting date
-                        ranges, and understanding results. Perfect for beginners, powerful for pros.</p>
+                    <div class="feature-icon">🏛️</div>
+                    <h3 class="feature-title">Institutional Validation</h3>
+                    <p class="feature-description">Our pipeline checks for look-ahead bias, curve fitting, and
+                        overfitting automatically. Walk-forward analysis with anchored windows ensures your strategy
+                        works on data it has never seen — not just in hindsight.</p>
                 </div>
 
                 <div class="feature-card fade-in">
                     <div class="feature-icon">💡</div>
                     <h3 class="feature-title">Educational Annotations</h3>
-                    <p class="feature-description">Results aren't just numbers—every metric includes plain-English
-                        explanations. Sharpe Ratio? Max Drawdown? We explain what it means and why it matters to YOU.
-                    </p>
+                    <p class="feature-description">Results aren't just numbers — every metric includes plain-English
+                        explanations. Sharpe Ratio? Max Drawdown? We explain what it means, why it matters, and how the
+                        Grinder evaluated it.</p>
                 </div>
 
                 <div class="feature-card fade-in">
                     <div class="feature-icon">🔍</div>
                     <h3 class="feature-title">Strategy Debugger</h3>
                     <p class="feature-description">See exactly WHERE and WHY each trade happened. Click any trade to
-                        understand what triggered it, what indicators looked like, and how it performed. Turn losses
-                        into lessons.</p>
+                        understand what triggered it, what indicators looked like, and how the Red Team would have
+                        challenged the signal.</p>
                 </div>
 
                 <div class="feature-card fade-in">
-                    <div class="feature-icon">📊</div>
-                    <h3 class="feature-title">Portfolio Analytics</h3>
-                    <p class="feature-description">Upload your real portfolio and get instant health checks: sector
-                        diversification warnings, correlation risks, concentration alerts, and actionable suggestions to
-                        reduce risk.</p>
+                    <div class="feature-icon">🌪️</div>
+                    <h3 class="feature-title">Regime Analysis</h3>
+                    <p class="feature-description">Every strategy is tested against the 2008 Financial Crisis, COVID
+                        crash, 2022 rate hikes, flash crashes, and liquidity gaps. See how your strategy performs when
+                        markets break — before you risk real capital.</p>
                 </div>
 
                 <div class="feature-card fade-in">
                     <div class="feature-icon">⚡</div>
                     <h3 class="feature-title">Visual + Code Builders</h3>
                     <p class="feature-description">Drag-and-drop visual builder for beginners. Python code editor for
-                        advanced users. Start simple, grow into complexity at your own pace.</p>
+                        advanced users. Both routes feed into the same institutional-grade validation engine.</p>
                 </div>
             </div>
         </section>
@@ -147,18 +270,25 @@
         <!-- Strategy Library Preview -->
         <section class="section" id="strategies">
             <div class="section-header">
-                <span class="section-tag">Strategy Examples</span>
-                <h2 class="section-title">Learn From Real Strategies</h2>
-                <p class="section-description">Each strategy includes full explanations, code walkthroughs, and
-                    historical performance analysis</p>
+                <span class="section-tag">Survivors of The Grinder</span>
+                <h2 class="section-title">These Strategies Didn't Break</h2>
+                <p class="section-description">Each strategy survived all 7 pipeline stages, 5 stress scenarios, and
+                    adversarial AI critique. Learn from the best.</p>
             </div>
 
             <div class="strategy-grid">
                 <div class="strategy-card">
-                    <span class="strategy-tag">BEGINNER FRIENDLY</span>
+                    <div class="strategy-tags">
+                        <span class="strategy-tag">BEGINNER FRIENDLY</span>
+                        <span class="survivor-tag">🏆 SURVIVOR</span>
+                    </div>
                     <h3 class="strategy-name">Moving Average Crossover</h3>
-                    <p class="strategy-desc">Buy when the 50-day moving average crosses above the 200-day. Classic
-                        trend-following strategy perfect for learning the basics.</p>
+                    <p class="strategy-desc">Buy when the 50-day MA crosses above the 200-day. Classic
+                        trend-following strategy — survived all crash injections and walk-forward validation.</p>
+                    <div class="strategy-badges">
+                        <span class="badge badge-stress">STRESS TESTED</span>
+                        <span class="badge badge-walk">WALK-FORWARD</span>
+                    </div>
                     <div class="strategy-metrics">
                         <div class="metric">
                             <div class="metric-label">Backtest Return</div>
@@ -173,17 +303,24 @@
                             <div class="metric-value">-18.3%</div>
                         </div>
                         <div class="metric">
-                            <div class="metric-label">Win Rate</div>
-                            <div class="metric-value">58%</div>
+                            <div class="metric-label">Robustness</div>
+                            <div class="metric-value positive">8.4/10</div>
                         </div>
                     </div>
                 </div>
 
                 <div class="strategy-card">
-                    <span class="strategy-tag">INTERMEDIATE</span>
+                    <div class="strategy-tags">
+                        <span class="strategy-tag">INTERMEDIATE</span>
+                        <span class="survivor-tag">🏆 SURVIVOR</span>
+                    </div>
                     <h3 class="strategy-name">RSI Mean Reversion</h3>
-                    <p class="strategy-desc">Buy oversold stocks (RSI < 30) and sell overbought (RSI> 70). Works best in
-                            ranging markets with clear support/resistance.</p>
+                    <p class="strategy-desc">Buy oversold stocks (RSI &lt; 30) and sell overbought (RSI &gt; 70).
+                        Interrogation passed: works in ranging markets, killed in trending regimes.</p>
+                    <div class="strategy-badges">
+                        <span class="badge badge-stress">STRESS TESTED</span>
+                        <span class="badge badge-walk">WALK-FORWARD</span>
+                    </div>
                     <div class="strategy-metrics">
                         <div class="metric">
                             <div class="metric-label">Backtest Return</div>
@@ -198,17 +335,24 @@
                             <div class="metric-value">-12.4%</div>
                         </div>
                         <div class="metric">
-                            <div class="metric-label">Win Rate</div>
-                            <div class="metric-value">62%</div>
+                            <div class="metric-label">Robustness</div>
+                            <div class="metric-value positive">9.1/10</div>
                         </div>
                     </div>
                 </div>
 
                 <div class="strategy-card">
-                    <span class="strategy-tag">ADVANCED</span>
+                    <div class="strategy-tags">
+                        <span class="strategy-tag">ADVANCED</span>
+                        <span class="survivor-tag">🏆 SURVIVOR</span>
+                    </div>
                     <h3 class="strategy-name">Momentum Strategy</h3>
-                    <p class="strategy-desc">Buy stocks showing strong recent performance and ride the trend. Combines
-                        price momentum with volume confirmation for higher conviction trades.</p>
+                    <p class="strategy-desc">Buy stocks showing strong recent performance with volume confirmation.
+                        Survived 2008 crash injection but flagged for higher drawdown risk by Red Team.</p>
+                    <div class="strategy-badges">
+                        <span class="badge badge-stress">STRESS TESTED</span>
+                        <span class="badge badge-walk">WALK-FORWARD</span>
+                    </div>
                     <div class="strategy-metrics">
                         <div class="metric">
                             <div class="metric-label">Backtest Return</div>
@@ -223,190 +367,126 @@
                             <div class="metric-value">-24.1%</div>
                         </div>
                         <div class="metric">
-                            <div class="metric-label">Win Rate</div>
-                            <div class="metric-value">54%</div>
+                            <div class="metric-label">Robustness</div>
+                            <div class="metric-value neutral">7.6/10</div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Demo Section -->
-        <section class="section" id="learn">
+        <!-- Quant-as-a-Service -->
+        <section class="section" id="services">
             <div class="section-header">
-                <span class="section-tag">See It In Action</span>
-                <h2 class="section-title">Educational Explanations<br />Built Right In</h2>
-                <p class="section-description">Every metric comes with context that helps you actually understand what
-                    you're looking at</p>
+                <span class="section-tag">Quant-as-a-Service</span>
+                <h2 class="section-title">Institutional-Grade<br />Validation</h2>
+                <p class="section-description">Most platforms sell tools. We sell truth.</p>
             </div>
 
-            <div class="demo-container">
-                <div class="demo-header">
-                    <div class="demo-dot red"></div>
-                    <div class="demo-dot yellow"></div>
-                    <div class="demo-dot green"></div>
+            <div class="services-grid">
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🛡️</div>
+                    <h3 class="feature-title">The Stress Test Certification</h3>
+                    <p class="feature-description">Don't just backtest. Submit your strategy to our Stage 5 Stress
+                        Scenarios. Receive a <strong>Crash Report</strong> showing performance during 2020-style
+                        crashes, volatility spikes, and correlation breakdowns. Know the truth before you allocate.</p>
+                    <div class="service-stage-ref">
+                        <span class="badge badge-stress">STAGE 5</span>
+                        <span class="badge badge-walk">CRASH INJECTION</span>
+                    </div>
                 </div>
-                <div class="demo-content">
-                    <h3 style="margin-bottom: 2rem; font-size: 1.5rem;">Strategy Performance Results</h3>
 
-                    <div
-                        style="background: rgba(0, 255, 136, 0.05); border-left: 3px solid var(--primary); padding: 1.5rem; margin-bottom: 2rem; border-radius: 12px;">
-                        <div
-                            style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5rem;">
-                            <span style="font-size: 0.9rem; color: var(--text-muted);">Portfolio Performance</span>
-                            <span style="font-size: 2.5rem; font-weight: 800; color: var(--primary);">+45.2%</span>
-                        </div>
-                        <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">
-                            <strong style="color: var(--text);">What this means:</strong> Your $10,000 investment became
-                            $14,520<br />
-                            <strong style="color: var(--text);">Comparison:</strong> S&P 500 returned +38.1% (you beat
-                            the market!)<br />
-                            <strong style="color: var(--text);">Why:</strong> Your strategy caught the trend early in
-                            March 2020
-                        </p>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🕵️</div>
+                    <h3 class="feature-title">Adversarial Code Review</h3>
+                    <p class="feature-description">Our Stage 4 "Interrogation" agents attack your code. We deliver a
+                        <strong>critique.md</strong> exposing look-ahead bias, overfitting, survivorship bias, and
+                        hidden transaction costs. Three LLMs. Zero sympathy.
+                    </p>
+                    <div class="service-stage-ref">
+                        <span class="badge badge-stress">STAGE 4</span>
+                        <span class="badge badge-walk">RED TEAM AI</span>
                     </div>
+                </div>
 
-                    <div
-                        style="background: rgba(0, 136, 255, 0.05); border-left: 3px solid var(--secondary); padding: 1.5rem; margin-bottom: 2rem; border-radius: 12px;">
-                        <div
-                            style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5rem;">
-                            <span style="font-size: 0.9rem; color: var(--text-muted);">Sharpe Ratio</span>
-                            <span style="font-size: 2.5rem; font-weight: 800; color: var(--secondary);">1.24</span>
-                        </div>
-                        <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">
-                            <strong style="color: var(--text);">What this means:</strong> Good risk-adjusted
-                            returns<br />
-                            <strong style="color: var(--text);">Rule of thumb:</strong> >1 is good, >2 is excellent,
-                            <1 needs improvement<br />
-                            <strong style="color: var(--text);">Your strategy:</strong> Moderate risk for moderate
-                            reward
-                        </p>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🪦</div>
+                    <h3 class="feature-title">Failure Case Studies</h3>
+                    <p class="feature-description">Access the 96% of strategies that failed. Learn why a "perfect"
+                        Moving Average Cross lost 50% in 2025. Dissect broken strategies, study the kill reports, and
+                        understand what separates survivors from casualties.</p>
+                    <div class="service-stage-ref">
+                        <span class="badge badge-stress">THE GRAVEYARD</span>
+                        <span class="badge badge-walk">96% KILL RATE</span>
                     </div>
+                </div>
 
-                    <div
-                        style="background: rgba(255, 170, 0, 0.05); border-left: 3px solid var(--warning); padding: 1.5rem; border-radius: 12px;">
-                        <div
-                            style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5rem;">
-                            <span style="font-size: 0.9rem; color: var(--text-muted);">Max Drawdown</span>
-                            <span style="font-size: 2.5rem; font-weight: 800; color: var(--warning);">-18.3%</span>
-                        </div>
-                        <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6;">
-                            <strong style="color: var(--text);">What this means:</strong> Your worst loss from peak was
-                            18.3%<br />
-                            <strong style="color: var(--text);">Could you stomach this?:</strong> Most investors panic
-                            at -20%<br />
-                            <strong style="color: var(--text);">Consider:</strong> Adding stop-losses to protect
-                            downside
-                        </p>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">📡</div>
+                    <h3 class="feature-title">Live Survivor Feed</h3>
+                    <p class="feature-description">Don't code? Subscribe to the output. Get daily buy/sell signals
+                        only from strategies that survived the entire 7-stage kill pipeline. No theory. No predictions.
+                        Just validated survivors executing in real-time.</p>
+                    <div class="service-stage-ref">
+                        <span class="badge badge-stress">STAGE 7</span>
+                        <span class="badge badge-walk">LIVE SIGNALS</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Code Example -->
-        <section class="section">
-            <div class="section-header">
-                <span class="section-tag">For Developers</span>
-                <h2 class="section-title">Code Your Own Strategies</h2>
-                <p class="section-description">Python-based strategy builder with full control over your logic</p>
-            </div>
-
-            <div class="demo-container">
-                <div class="demo-header">
-                    <div class="demo-dot red"></div>
-                    <div class="demo-dot yellow"></div>
-                    <div class="demo-dot green"></div>
-                    <span
-                        style="margin-left: auto; color: var(--text-muted); font-size: 0.85rem; font-family: 'JetBrains Mono', monospace;">strategy.py</span>
-                </div>
-                <div class="demo-content">
-                    <div class="code-block">
-                        <div class="code-line"><span class="code-keyword">def</span> <span
-                                class="code-function">moving_average_crossover</span>(data):</div>
-                        <div class="code-line"> <span class="code-comment"># Calculate 50-day and 200-day moving
-                                averages</span></div>
-                        <div class="code-line"> data[<span class="code-string">'MA_50'</span>] = data[<span
-                                class="code-string">'Close'</span>].rolling(<span class="code-number">50</span>).mean()
-                        </div>
-                        <div class="code-line"> data[<span class="code-string">'MA_200'</span>] = data[<span
-                                class="code-string">'Close'</span>].rolling(<span class="code-number">200</span>).mean()
-                        </div>
-                        <div class="code-line"> </div>
-                        <div class="code-line"> <span class="code-comment"># Generate buy/sell signals</span></div>
-                        <div class="code-line"> data[<span class="code-string">'Signal'</span>] = <span
-                                class="code-number">0</span></div>
-                        <div class="code-line"> data[<span class="code-string">'Signal'</span>][<span
-                                class="code-number">50</span>:] = np.where(</div>
-                        <div class="code-line"> data[<span class="code-string">'MA_50'</span>][<span
-                                class="code-number">50</span>:] > data[<span class="code-string">'MA_200'</span>][<span
-                                class="code-number">50</span>:], </div>
-                        <div class="code-line"> <span class="code-number">1</span>, <span class="code-comment"># Buy
-                                signal</span></div>
-                        <div class="code-line"> <span class="code-number">0</span> <span class="code-comment"># Sell
-                                signal</span></div>
-                        <div class="code-line"> )</div>
-                        <div class="code-line"> </div>
-                        <div class="code-line"> <span class="code-keyword">return</span> data</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Pricing Section -->
+        <!-- Access Levels (Pricing) -->
         <section class="section" id="pricing">
             <div class="section-header">
-                <span class="section-tag">Simple Pricing</span>
-                <h2 class="section-title">Transparent & Affordable</h2>
-                <p class="section-description">No hidden fees. No surprises. Just honest pricing that grows with you.
-                </p>
+                <span class="section-tag">Access Levels</span>
+                <h2 class="section-title">Choose Your Clearance</h2>
+                <p class="section-description">Every tier is backed by the same pipeline. The difference is how deep
+                    you go.</p>
             </div>
 
             <div class="pricing-grid">
                 <div class="pricing-card">
-                    <h3 class="pricing-name">Free</h3>
+                    <h3 class="pricing-name">The Cadet</h3>
                     <div class="pricing-price">$0<span>/forever</span></div>
-                    <p class="pricing-description">Perfect for learning and trying out strategies</p>
+                    <p class="pricing-description">Best for: Learners &amp; researchers</p>
                     <ul class="pricing-features">
-                        <li>5 backtests per day</li>
-                        <li>All pre-built strategies</li>
-                        <li>Up to 5 stocks per backtest</li>
-                        <li>5 years historical data</li>
-                        <li>Basic portfolio analysis</li>
-                        <li>All educational content</li>
-                        <li>Community support</li>
+                        <li>5 Standard Backtests / day</li>
+                        <li>Access to The Graveyard (failed strategies)</li>
+                        <li>Basic Survivor Strategy Library</li>
+                        <li>Educational annotations on all metrics</li>
+                        <li>Community access</li>
                     </ul>
                     <a href="#" class="secondary-button" style="display: block; text-align: center;">Start Free</a>
                 </div>
 
                 <div class="pricing-card featured">
                     <div class="pricing-badge">MOST POPULAR</div>
-                    <h3 class="pricing-name">Pro</h3>
-                    <div class="pricing-price">$9.99<span>/month</span></div>
-                    <p class="pricing-description">For serious traders who want unlimited testing</p>
+                    <h3 class="pricing-name">The Architect</h3>
+                    <div class="pricing-price">$29<span>/month</span></div>
+                    <p class="pricing-description">Best for: Serious retail traders</p>
                     <ul class="pricing-features">
-                        <li>Unlimited backtests</li>
-                        <li>Up to 50 stocks per backtest</li>
-                        <li>10 years historical data</li>
-                        <li>Save unlimited strategies</li>
-                        <li>Advanced portfolio analytics</li>
+                        <li>Unlimited Strategy Grinder access (Stages 1–3)</li>
+                        <li>Red Team AI Code Reviews (Stage 4)</li>
+                        <li>Download generated Python code</li>
+                        <li>Full kill reports &amp; audit trails</li>
+                        <li>"Verified Robust" community badge</li>
                         <li>Export results to CSV</li>
                         <li>Priority support</li>
-                        <li>Early access to new features</li>
                     </ul>
                     <a href="#" class="cta-button" style="display: block; text-align: center;">Start 14-Day Trial</a>
                 </div>
 
                 <div class="pricing-card">
-                    <h3 class="pricing-name">Team</h3>
-                    <div class="pricing-price">$29.99<span>/month</span></div>
-                    <p class="pricing-description">For teams and small investment groups</p>
+                    <h3 class="pricing-name">The Quant</h3>
+                    <div class="pricing-price">$99<span>/month</span></div>
+                    <p class="pricing-description">Best for: Professional / Algorithmic</p>
                     <ul class="pricing-features">
-                        <li>Everything in Pro</li>
-                        <li>Up to 5 team members</li>
-                        <li>Share strategies privately</li>
-                        <li>Collaborative backtesting</li>
-                        <li>API access</li>
-                        <li>Custom integrations</li>
+                        <li>Full Pipeline access (Stages 1–7)</li>
+                        <li>Deep Stress Testing (crash injection)</li>
+                        <li>Live Data Deployment (paper trade survivors)</li>
+                        <li>API access to pull Survivor Signals</li>
+                        <li>Walk-forward validation reports</li>
+                        <li>Regime analysis across 5 scenarios</li>
                         <li>Dedicated support</li>
                     </ul>
                     <a href="#" class="secondary-button" style="display: block; text-align: center;">Contact Sales</a>
@@ -414,80 +494,31 @@
             </div>
         </section>
 
-        <!-- Portfolio Analytics Preview -->
-        <section class="section">
-            <div class="section-header">
-                <span class="section-tag">Portfolio Health</span>
-                <h2 class="section-title">Know Your Risk</h2>
-                <p class="section-description">Upload your portfolio and get instant insights into diversification,
-                    correlation, and concentration risks</p>
-            </div>
-
-            <div class="demo-container">
-                <div class="demo-header">
-                    <div class="demo-dot red"></div>
-                    <div class="demo-dot yellow"></div>
-                    <div class="demo-dot green"></div>
+        <!-- Enterprise B2B Banner -->
+        <section class="enterprise-banner" id="enterprise">
+            <div class="enterprise-content">
+                <div class="enterprise-text">
+                    <span class="section-tag" style="margin-bottom: 1rem;">Enterprise &amp; Funds</span>
+                    <h2 class="enterprise-title">White-Label The Grinder</h2>
+                    <p class="enterprise-desc">Lack the infrastructure to test 50 ideas a day? Upload raw hypotheses and
+                        let our pipeline deliver the 1–2 survivors with full audit trails. Perfect for small funds,
+                        family offices, and proprietary trading desks.</p>
                 </div>
-                <div class="demo-content">
-                    <h3 style="margin-bottom: 2rem; font-size: 1.5rem;">Your Portfolio Health Check</h3>
-
-                    <div
-                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
-                        <div
-                            style="background: rgba(255, 68, 68, 0.1); border: 1px solid rgba(255, 68, 68, 0.3); padding: 1.5rem; border-radius: 16px;">
-                            <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.5rem;">⚠️ Sector
-                                Concentration</div>
-                            <div
-                                style="font-size: 2rem; font-weight: 800; color: var(--danger); margin-bottom: 0.5rem;">
-                                65% Tech</div>
-                            <p style="font-size: 0.85rem; color: var(--text-muted);">High risk - consider diversifying
-                                into defensive sectors</p>
-                        </div>
-
-                        <div
-                            style="background: rgba(255, 170, 0, 0.1); border: 1px solid rgba(255, 170, 0, 0.3); padding: 1.5rem; border-radius: 16px;">
-                            <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.5rem;">⚠️
-                                Correlation Risk</div>
-                            <div
-                                style="font-size: 2rem; font-weight: 800; color: var(--warning); margin-bottom: 0.5rem;">
-                                r = 0.82</div>
-                            <p style="font-size: 0.85rem; color: var(--text-muted);">AAPL + MSFT move together closely
-                            </p>
-                        </div>
-
-                        <div
-                            style="background: rgba(0, 255, 136, 0.1); border: 1px solid rgba(0, 255, 136, 0.3); padding: 1.5rem; border-radius: 16px;">
-                            <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.5rem;">✓ Win Rate
-                            </div>
-                            <div
-                                style="font-size: 2rem; font-weight: 800; color: var(--success); margin-bottom: 0.5rem;">
-                                62%</div>
-                            <p style="font-size: 0.85rem; color: var(--text-muted);">Strong performance vs benchmark</p>
-                        </div>
-                    </div>
-
-                    <div
-                        style="margin-top: 2rem; padding: 1.5rem; background: rgba(0, 136, 255, 0.05); border-radius: 12px; border: 1px solid rgba(0, 136, 255, 0.2);">
-                        <h4 style="margin-bottom: 1rem; color: var(--secondary);">💡 Suggestions</h4>
-                        <ul style="color: var(--text-muted); line-height: 1.8; padding-left: 1.5rem;">
-                            <li>Add defensive sectors like utilities or consumer staples (10-15% allocation)</li>
-                            <li>Consider reducing AAPL or MSFT to lower correlation risk</li>
-                            <li>Top 3 holdings = 70% of portfolio - aim for 50-60% max</li>
-                        </ul>
-                    </div>
+                <div class="enterprise-cta">
+                    <a href="#" class="cta-button">Request API Access</a>
+                    <p class="enterprise-note">Custom pricing · SLA available · SOC 2 compliant</p>
                 </div>
             </div>
         </section>
 
         <!-- Final CTA -->
         <section class="cta-section">
-            <h2>Start Your Trading Education<br />Today</h2>
-            <p>Join thousands of traders learning algorithmic strategies the right way. Free forever. No credit card
-                required.</p>
+            <h2>Stop Guessing.<br />Start Validating.</h2>
+            <p>96% of strategies fail our pipeline. The ones that survive are the ones worth your capital.
+                Start with the truth.</p>
             <div style="display: flex; gap: 1.5rem; justify-content: center; align-items: center; flex-wrap: wrap;">
                 <a href="#" class="cta-button">Create Free Account</a>
-                <a href="#" class="secondary-button">Browse Strategies →</a>
+                <a href="#services" class="secondary-button">Explore Services →</a>
             </div>
         </section>
 
@@ -495,41 +526,44 @@
         <footer>
             <div class="footer-content">
                 <div>
-                    <div class="footer-brand">AlgoWorkout</div>
-                    <p class="footer-description">Learn algorithmic trading through hands-on practice. Educational
-                        backtesting platform designed for beginners and professionals.</p>
+                    <div class="footer-brand">
+                        <img src="assets/images/logo_algoworkout.png" alt="AlgoWorkout Logo" class="footer-logo-icon">
+                        <span>AlgoWorkout</span>
+                    </div>
+                    <p class="footer-description">Institutional-grade strategy validation. Powered by The Strategy
+                        Grinder — a 7-stage Multi-LLM kill pipeline.</p>
                 </div>
                 <div class="footer-links">
-                    <h4>Product</h4>
+                    <h4>Platform</h4>
                     <ul>
-                        <li><a href="#">Features</a></li>
-                        <li><a href="#">Pricing</a></li>
-                        <li><a href="#">Strategy Library</a></li>
-                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#engine">The Engine</a></li>
+                        <li><a href="pages/platform/services.html">Services</a></li>
+                        <li><a href="pages/platform/access-levels.html">Access Levels</a></li>
+                        <li><a href="pages/platform/survivors.html">Survivors</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
                     <h4>Resources</h4>
                     <ul>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Tutorials</a></li>
-                        <li><a href="#">Community</a></li>
-                        <li><a href="#">Support</a></li>
+                        <li><a href="pages/resources/api-docs.html">API Docs</a></li>
+                        <li><a href="pages/resources/kill-reports.html">Kill Reports</a></li>
+                        <li><a href="pages/resources/graveyard.html">The Graveyard</a></li>
+                        <li><a href="pages/resources/support.html">Support</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
                     <h4>Company</h4>
                     <ul>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Privacy</a></li>
-                        <li><a href="#">Terms</a></li>
+                        <li><a href="pages/company/about.html">About</a></li>
+                        <li><a href="pages/company/contact.html">Contact</a></li>
+                        <li><a href="pages/company/privacy.html">Privacy</a></li>
+                        <li><a href="pages/company/terms.html">Terms</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
                 <div>© 2026 AlgoWorkout. All rights reserved.</div>
-                <div>Made with ❤️ for traders who want to learn</div>
+                <div>Powered by The Strategy Grinder 🔥</div>
             </div>
         </footer>
     </div>

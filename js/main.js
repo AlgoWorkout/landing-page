@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }, observerOptions);
 
     // Observe all feature cards and strategy cards
-    const animatedElements = document.querySelectorAll('.feature-card, .strategy-card, .pricing-card');
+    const animatedElements = document.querySelectorAll('.feature-card, .strategy-card, .pricing-card, .pipeline-stage');
     animatedElements.forEach(el => observer.observe(el));
 
     // =================================
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // =================================
 
     const themeToggle = document.getElementById('theme-toggle');
-    
+
     // Get current theme from localStorage or system preference
     function getPreferredTheme() {
         const savedTheme = localStorage.getItem('algoworkout-theme');

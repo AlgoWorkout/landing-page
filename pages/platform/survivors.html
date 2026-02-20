@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="AlgoWorkout survivors — strategies that passed all 7 stages of the kill pipeline. Only the top 2–4% make it here. View Sharpe ratios, drawdowns, and walk-forward results.">
+    <title>Survivors — AlgoWorkout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/pages.css">
+</head>
+
+<body>
+    <div class="page-container">
+        <!-- Header -->
+        <header class="page-header">
+            <a href="../../index.html" class="page-header__logo">AlgoWorkout</a>
+            <nav class="page-header__nav">
+                <a href="services.html">Services</a>
+                <a href="access-levels.html">Access Levels</a>
+                <a href="survivors.html">Survivors</a>
+                <a href="../resources/api-docs.html">API Docs</a>
+                <a href="../../index.html" class="page-header__back">← Home</a>
+            </nav>
+        </header>
+
+        <div class="page-content">
+            <!-- Hero -->
+            <section class="page-hero">
+                <span class="page-hero__tag">Survivors of The Grinder</span>
+                <h1 class="page-hero__title">The Survivors</h1>
+                <p class="page-hero__subtitle">Only the top 2–4% of AI-generated strategies survive all 7 pipeline
+                    stages. These strategies passed hypothesis validation, sanity checks, adversarial interrogation,
+                    stress testing, and walk-forward validation.</p>
+            </section>
+
+            <!-- What it means -->
+            <section class="page-section">
+                <h2 class="page-section__title">What Surviving Means</h2>
+                <p class="page-section__subtitle">A surviving strategy has been attacked by multiple independent AI
+                    models, tested against 5 hostile market scenarios (crash injection, volatility spikes, correlation
+                    breakdown), and validated on out-of-sample data it never saw during training. It doesn't mean the
+                    strategy is guaranteed to work — it means we couldn't kill it with every computational test
+                    available.</p>
+            </section>
+
+            <!-- Survivor Cards -->
+            <section class="page-section">
+                <h2 class="page-section__title">Example Survivors</h2>
+                <div class="page-grid page-grid--3">
+                    <!-- Survivor 1 -->
+                    <div class="survivor-card">
+                        <div class="survivor-card__badge">🏆 SURVIVOR</div>
+                        <h3 class="survivor-card__name">Momentum Treasury Spread</h3>
+                        <div class="survivor-card__ticker">TLT · Treasury ETF</div>
+                        <p class="survivor-card__logic">Trades TLT based on yield curve momentum. Goes long when the
+                            20-day rate of change in the 10Y-2Y spread exceeds +0.5σ, exits on mean reversion. Economic
+                            logic: yield curve steepening signals risk-on rotation into duration.</p>
+                        <div class="survivor-card__metrics">
+                            <div class="survivor-card__metric">
+                                <span class="survivor-card__metric-label">Sharpe Ratio</span>
+                                <span
+                                    class="survivor-card__metric-value survivor-card__metric-value--positive">1.34</span>
+                            </div>
+                            <div class="survivor-card__metric">
+                                <span class="survivor-card__metric-label">Total Trades</span>
+                                <span class="survivor-card__metric-value">89</span>
+                            </div>
+                            <div class="survivor-card__metric">
+                                <span class="survivor-card__metric-label">Max Drawdown</span>
+                                <span class="survivor-card__metric-value">-12.4%</span>
+                            </div>
+                            <div class="survivor-card__metric">
+                                <span class="survivor-card__metric-label">Walk-Forward Decay</span>
+                                <span
+                                    class="survivor-card__metric-value survivor-card__metric-value--positive">18%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Survivor 2 -->
+                    <div class="survivor-card">
+                        <div class="survivor-card__badge">🏆 SURVIVOR</div>
+                        <h3 class="survivor-card__name">Mean Reversion Gold-Equity Ratio</h3>
+                        <div class="survivor-card__ticker">GLD · Gold ETF</div>
+                        <p class="survivor-card__logic">Trades GLD when the GLD/SPY ratio deviates &gt;2σ from its
+                            60-day rolling mean. Economic logic: gold and equities have a long-run inverse relationship
+                            that mean-reverts during regime transitions.</p>
+                        <div class="survivor-card__metrics">
+                            <div class="survivor-card__metric">
+                                <span class="survivor-card__metric-label">Sharpe Ratio</span>
+                                <span
+                                    class="survivor-card__metric-value survivor-card__metric-value--positive">1.12</span>
+                            </div>
+                            <div class="survivor-card__metric">
+                                <span class="survivor-card__metric-label">Total Trades</span>
+                                <span class="survivor-card__metric-value">43</span>
+                            </div>
+                            <div class="survivor-card__metric">
+                                <span class="survivor-card__metric-label">Max Drawdown</span>
+                                <span class="survivor-card__metric-value">-15.8%</span>
+                            </div>
+                            <div class="survivor-card__metric">
+                                <span class="survivor-card__metric-label">Walk-Forward Decay</span>
+                                <span
+                                    class="survivor-card__metric-value survivor-card__metric-value--positive">22%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Survivor 3 -->
+                    <div class="survivor-card">
+                        <div class="survivor-card__badge">🏆 SURVIVOR</div>
+                        <h3 class="survivor-card__name">Volatility Risk Premium Capture</h3>
+                        <div class="survivor-card__ticker">VIX-correlated · Volatility</div>
+                        <p class="survivor-card__logic">Sells VIX-correlated exposure when the VIX term structure is in
+                            contango (&gt;5% spread between front-month and second-month futures). Economic logic: the
+                            volatility risk premium is systematically overpriced due to hedging demand.</p>
+                        <div class="survivor-card__metrics">
+                            <div class="survivor-card__metric">
+                                <span class="survivor-card__metric-label">Sharpe Ratio</span>
+                                <span
+                                    class="survivor-card__metric-value survivor-card__metric-value--positive">1.67</span>
+                            </div>
+                            <div class="survivor-card__metric">
+                                <span class="survivor-card__metric-label">Total Trades</span>
+                                <span class="survivor-card__metric-value">112</span>
+                            </div>
+                            <div class="survivor-card__metric">
+                                <span class="survivor-card__metric-label">Max Drawdown</span>
+                                <span class="survivor-card__metric-value">-18.2%</span>
+                            </div>
+                            <div class="survivor-card__metric">
+                                <span class="survivor-card__metric-label">Walk-Forward Decay</span>
+                                <span
+                                    class="survivor-card__metric-value survivor-card__metric-value--positive">11%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="disclaimer">
+                <p><strong>Disclaimer:</strong> These are educational examples. Past backtest performance does not
+                    guarantee future results. All strategies are paper-traded with minimum capital before any scaling.
+                    AlgoWorkout is an educational platform — this is not financial advice.</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="page-footer">
+            <div class="footer-content">
+                <div>
+                    <div class="footer-brand">AlgoWorkout</div>
+                    <p class="footer-description">Institutional-grade strategy validation. Powered by The Strategy
+                        Grinder — a 7-stage Multi-LLM kill pipeline.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Platform</h4>
+                    <ul>
+                        <li><a href="../../index.html#engine">The Engine</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="access-levels.html">Access Levels</a></li>
+                        <li><a href="survivors.html">Survivors</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="../resources/api-docs.html">API Docs</a></li>
+                        <li><a href="../resources/kill-reports.html">Kill Reports</a></li>
+                        <li><a href="../resources/graveyard.html">The Graveyard</a></li>
+                        <li><a href="../resources/support.html">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="../company/about.html">About</a></li>
+                        <li><a href="../company/contact.html">Contact</a></li>
+                        <li><a href="../company/privacy.html">Privacy</a></li>
+                        <li><a href="../company/terms.html">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>© 2026 AlgoWorkout. All rights reserved.</div>
+                <div>Powered by The Strategy Grinder 🔥</div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

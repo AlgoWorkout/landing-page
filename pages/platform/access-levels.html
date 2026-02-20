@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="AlgoWorkout access levels — Explorer (free), Builder ($49/mo), and Institutional plans. Run strategies through the 7-stage kill pipeline.">
+    <title>Access Levels — AlgoWorkout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/pages.css">
+</head>
+
+<body>
+    <div class="page-container">
+        <!-- Header -->
+        <header class="page-header">
+            <a href="../../index.html" class="page-header__logo">AlgoWorkout</a>
+            <nav class="page-header__nav">
+                <a href="services.html">Services</a>
+                <a href="access-levels.html">Access Levels</a>
+                <a href="survivors.html">Survivors</a>
+                <a href="../resources/api-docs.html">API Docs</a>
+                <a href="../../index.html" class="page-header__back">← Home</a>
+            </nav>
+        </header>
+
+        <div class="page-content page-content--wide">
+            <!-- Hero -->
+            <section class="page-hero">
+                <span class="page-hero__tag">Pricing</span>
+                <h1 class="page-hero__title">Choose Your Access Level</h1>
+                <p class="page-hero__subtitle">Every tier is backed by the same 7-stage pipeline. The difference is how
+                    deep you go.</p>
+            </section>
+
+            <!-- Pricing Cards -->
+            <div class="page-grid page-grid--3">
+                <!-- Explorer -->
+                <div class="tier-card">
+                    <h3 class="tier-card__name">Explorer</h3>
+                    <div class="tier-card__price">$0<span>/forever</span></div>
+                    <p class="tier-card__desc">Best for: Learners &amp; researchers</p>
+                    <ul class="tier-card__features">
+                        <li>View published kill reports</li>
+                        <li>Access The Graveyard (browse killed strategies and reasons)</li>
+                        <li>Read strategy survivors (public summaries only)</li>
+                        <li>Community Discord access</li>
+                        <li>Educational content &amp; annotations</li>
+                    </ul>
+                    <a href="#" class="tier-card__cta tier-card__cta--secondary">Get Started Free</a>
+                </div>
+
+                <!-- Builder -->
+                <div class="tier-card tier-card--featured">
+                    <div class="tier-badge">MOST POPULAR</div>
+                    <h3 class="tier-card__name">Builder</h3>
+                    <div class="tier-card__price">$49<span>/month</span></div>
+                    <p class="tier-card__desc">Best for: Serious retail traders &amp; developers</p>
+                    <ul class="tier-card__features">
+                        <li>Everything in Explorer</li>
+                        <li>Run your own hypotheses through the pipeline (5/month)</li>
+                        <li>Full kill reports with code and audit trail</li>
+                        <li>Stage-by-stage breakdown with manifests</li>
+                        <li>API access (read-only: view pipeline status and results)</li>
+                        <li>Email support (24–48 hour response)</li>
+                    </ul>
+                    <a href="#" class="tier-card__cta tier-card__cta--primary">Start 14-Day Trial</a>
+                </div>
+
+                <!-- Institutional -->
+                <div class="tier-card">
+                    <h3 class="tier-card__name">Institutional</h3>
+                    <div class="tier-card__price">Custom</div>
+                    <p class="tier-card__desc">Best for: Funds, prop desks &amp; teams</p>
+                    <ul class="tier-card__features">
+                        <li>Everything in Builder</li>
+                        <li>Unlimited pipeline runs</li>
+                        <li>Custom kill gate thresholds</li>
+                        <li>Custom ticker universe (beyond default ETFs)</li>
+                        <li>Full API access (read + write: trigger runs, configure models)</li>
+                        <li>Dedicated support + onboarding (4-hour response)</li>
+                        <li>White-label option</li>
+                        <li>Custom LLM model selection per stage</li>
+                    </ul>
+                    <a href="../company/contact.html" class="tier-card__cta tier-card__cta--secondary">Contact Sales</a>
+                </div>
+            </div>
+
+            <!-- FAQ -->
+            <section class="page-section" style="margin-top: 3rem;">
+                <h2 class="page-section__title">Frequently Asked Questions</h2>
+
+                <div class="faq-item">
+                    <div class="faq-item__question">How does billing work?</div>
+                    <p class="faq-item__answer">Builder plans are billed monthly. You can cancel anytime from your
+                        Account Settings. No refunds for partial months. Institutional plans are billed annually or
+                        monthly — contact sales for details.</p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-item__question">What happens when a strategy is killed?</div>
+                    <p class="faq-item__answer">Killed strategies are moved to your Graveyard with a complete kill
+                        report: which gate killed it, what thresholds it failed, the specific metrics at time of death,
+                        and the full audit trail. You learn as much from failures as from survivors.</p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-item__question">Can I re-run a killed strategy?</div>
+                    <p class="faq-item__answer">No. Killed strategies are permanently archived. Re-running a failed
+                        hypothesis would be curve fitting — the same trap the pipeline is designed to prevent. Instead,
+                        generate new hypotheses informed by what you learned from the kill report.</p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-item__question">What instruments are supported?</div>
+                    <p class="faq-item__answer">The default universe is a pre-approved set of liquid ETFs: SPY, QQQ,
+                        TLT, GLD, IWM, EFA, and others. Institutional plans can configure a custom ticker universe.</p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-item__question">Do I keep the Python code for surviving strategies?</div>
+                    <p class="faq-item__answer">Yes. Builder and Institutional plans include access to the generated
+                        Python backtest code, full audit trail, and deploy report for every surviving strategy.</p>
+                </div>
+            </section>
+        </div>
+
+        <!-- Footer -->
+        <footer class="page-footer">
+            <div class="footer-content">
+                <div>
+                    <div class="footer-brand">AlgoWorkout</div>
+                    <p class="footer-description">Institutional-grade strategy validation. Powered by The Strategy
+                        Grinder — a 7-stage Multi-LLM kill pipeline.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Platform</h4>
+                    <ul>
+                        <li><a href="../../index.html#engine">The Engine</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="access-levels.html">Access Levels</a></li>
+                        <li><a href="survivors.html">Survivors</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="../resources/api-docs.html">API Docs</a></li>
+                        <li><a href="../resources/kill-reports.html">Kill Reports</a></li>
+                        <li><a href="../resources/graveyard.html">The Graveyard</a></li>
+                        <li><a href="../resources/support.html">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="../company/about.html">About</a></li>
+                        <li><a href="../company/contact.html">Contact</a></li>
+                        <li><a href="../company/privacy.html">Privacy</a></li>
+                        <li><a href="../company/terms.html">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>© 2026 AlgoWorkout. All rights reserved.</div>
+                <div>Powered by The Strategy Grinder 🔥</div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

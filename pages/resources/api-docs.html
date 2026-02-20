@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="AlgoWorkout REST API documentation — endpoints for strategies, kill reports, equity curves, and pipeline management. Bearer token auth, rate limits, and example requests.">
+    <title>API Documentation — AlgoWorkout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/pages.css">
+</head>
+
+<body>
+    <div class="page-container">
+        <!-- Header -->
+        <header class="page-header">
+            <a href="../../index.html" class="page-header__logo">AlgoWorkout</a>
+            <nav class="page-header__nav">
+                <a href="api-docs.html">API Docs</a>
+                <a href="kill-reports.html">Kill Reports</a>
+                <a href="graveyard.html">Graveyard</a>
+                <a href="support.html">Support</a>
+                <a href="../../index.html" class="page-header__back">← Home</a>
+            </nav>
+        </header>
+
+        <div class="page-content">
+            <!-- Hero -->
+            <section class="page-hero">
+                <span class="page-hero__tag">Developer Docs</span>
+                <h1 class="page-hero__title">API Documentation</h1>
+                <p class="page-hero__subtitle">Access AlgoWorkout programmatically. Query strategies, pull kill reports,
+                    and manage pipeline runs via REST API.</p>
+            </section>
+
+            <!-- Authentication -->
+            <section class="page-section">
+                <h2 class="page-section__title">Authentication</h2>
+                <p class="page-section__subtitle">All API requests require a Bearer token. You can generate an API key
+                    from your Account Settings.</p>
+                <div class="code-block">
+                    <code>Authorization: Bearer YOUR_API_KEY</code>
+                </div>
+                <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 1rem;">
+                    <strong style="color: var(--text);">Rate Limits:</strong> Builder plans — 100 requests/hour.
+                    Institutional plans — unlimited.
+                </p>
+            </section>
+
+            <!-- Base URL -->
+            <section class="page-section">
+                <h2 class="page-section__title">Base URL</h2>
+                <div class="code-block">
+                    <code>https://api.algoworkout.com/api/v1</code>
+                </div>
+            </section>
+
+            <!-- Endpoints -->
+            <section class="page-section">
+                <h2 class="page-section__title">Endpoints</h2>
+
+                <div class="endpoint">
+                    <div>
+                        <span class="endpoint__method endpoint__method--get">GET</span>
+                        <span class="endpoint__path">/strategies</span>
+                    </div>
+                    <p class="endpoint__desc">List all your strategies with current pipeline status (hypothesis,
+                        surviving, killed, deployed).</p>
+                </div>
+
+                <div class="endpoint">
+                    <div>
+                        <span class="endpoint__method endpoint__method--get">GET</span>
+                        <span class="endpoint__path">/strategies/{id}</span>
+                    </div>
+                    <p class="endpoint__desc">Get full manifest for a specific strategy, including all stage results and
+                        audit trail.</p>
+                </div>
+
+                <div class="endpoint">
+                    <div>
+                        <span class="endpoint__method endpoint__method--get">GET</span>
+                        <span class="endpoint__path">/strategies/{id}/kill-report</span>
+                    </div>
+                    <p class="endpoint__desc">Get the kill report for a killed strategy: reason, stage, metrics, and LLM
+                        critique.</p>
+                </div>
+
+                <div class="endpoint">
+                    <div>
+                        <span class="endpoint__method endpoint__method--get">GET</span>
+                        <span class="endpoint__path">/strategies/{id}/equity-curve</span>
+                    </div>
+                    <p class="endpoint__desc">Get equity curve data as JSON (date, portfolio_value, drawdown).</p>
+                </div>
+
+                <div class="endpoint">
+                    <div>
+                        <span class="endpoint__method endpoint__method--get">GET</span>
+                        <span class="endpoint__path">/pipeline/status</span>
+                    </div>
+                    <p class="endpoint__desc">Get current pipeline status — counts per stage (hypothesis, sanity_check,
+                        interrogation, stress_test, walk_forward, deployed).</p>
+                </div>
+
+                <div class="endpoint">
+                    <div>
+                        <span class="endpoint__method endpoint__method--post">POST</span>
+                        <span class="endpoint__path">/pipeline/run</span>
+                    </div>
+                    <p class="endpoint__desc">Trigger a new pipeline run with a custom hypothesis. <strong>Institutional
+                            only.</strong></p>
+                </div>
+
+                <div class="endpoint">
+                    <div>
+                        <span class="endpoint__method endpoint__method--post">POST</span>
+                        <span class="endpoint__path">/pipeline/configure</span>
+                    </div>
+                    <p class="endpoint__desc">Update kill gate thresholds (min_sharpe, min_trades, max_drawdown,
+                        max_decay). <strong>Institutional only.</strong></p>
+                </div>
+            </section>
+
+            <!-- Example: List Strategies -->
+            <section class="page-section">
+                <h2 class="page-section__title">Example: List Strategies</h2>
+                <p class="page-section__subtitle">Request:</p>
+                <div class="code-block">
+                    <code>curl -X GET https://api.algoworkout.com/api/v1/strategies \
+  -H "Authorization: Bearer ak_live_abc123xyz"</code>
+                </div>
+                <p class="page-section__subtitle" style="margin-top: 1.5rem;">Response (<span class="code-inline">200
+                        OK</span>):</p>
+                <div class="code-block">
+                    <code>{
+  "strategies": [
+    {
+      "id": "strat_001",
+      "name": "Momentum Treasury Spread",
+      "status": "deployed",
+      "ticker": "TLT",
+      "sharpe": 1.34,
+      "max_drawdown": -12.4,
+      "created_at": "2026-01-15T10:30:00Z"
+    },
+    {
+      "id": "strat_002",
+      "name": "Overnight Gap Reversal",
+      "status": "killed",
+      "kill_stage": "sanity_check",
+      "kill_reason": "Sharpe 0.21 < 0.5 threshold",
+      "created_at": "2026-01-16T14:20:00Z"
+    }
+  ],
+  "total": 2,
+  "page": 1
+}</code>
+                </div>
+            </section>
+
+            <!-- Example: Get Kill Report -->
+            <section class="page-section">
+                <h2 class="page-section__title">Example: Get Kill Report</h2>
+                <p class="page-section__subtitle">Request:</p>
+                <div class="code-block">
+                    <code>curl -X GET https://api.algoworkout.com/api/v1/strategies/strat_002/kill-report \
+  -H "Authorization: Bearer ak_live_abc123xyz"</code>
+                </div>
+                <p class="page-section__subtitle" style="margin-top: 1.5rem;">Response (<span class="code-inline">200
+                        OK</span>):</p>
+                <div class="code-block">
+                    <code>{
+  "strategy_id": "strat_002",
+  "name": "Overnight Gap Reversal",
+  "kill_stage": "sanity_check",
+  "kill_gate": 3,
+  "verdict": "KILL",
+  "reason": "Failed minimum thresholds",
+  "metrics_at_death": {
+    "sharpe_ratio": 0.21,
+    "total_trades": 12,
+    "max_drawdown": -8.3,
+    "annual_return": 3.2
+  },
+  "thresholds": {
+    "min_sharpe": 0.5,
+    "min_trades": 25
+  },
+  "failed_checks": ["sharpe_below_minimum", "insufficient_trades"],
+  "killed_at": "2026-01-16T14:22:34Z"
+}</code>
+                </div>
+            </section>
+
+            <!-- SDKs -->
+            <section class="page-section">
+                <h2 class="page-section__title">SDKs</h2>
+                <p class="page-section__subtitle">Python SDK coming soon. For now, use the REST API directly with any
+                    HTTP client (<span class="code-inline">curl</span>, <span class="code-inline">requests</span>, <span
+                        class="code-inline">httpx</span>, etc.).</p>
+            </section>
+
+            <!-- Error Codes -->
+            <section class="page-section">
+                <h2 class="page-section__title">HTTP Status Codes</h2>
+                <table class="page-table">
+                    <thead>
+                        <tr>
+                            <th>Code</th>
+                            <th>Meaning</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="code-inline">200</span></td>
+                            <td>OK</td>
+                            <td>Request succeeded.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code-inline">400</span></td>
+                            <td>Bad Request</td>
+                            <td>Invalid parameters or malformed request body.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code-inline">401</span></td>
+                            <td>Unauthorized</td>
+                            <td>Missing or invalid API key.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code-inline">403</span></td>
+                            <td>Forbidden</td>
+                            <td>Your plan does not include access to this endpoint.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code-inline">429</span></td>
+                            <td>Rate Limited</td>
+                            <td>Too many requests. Wait and retry.</td>
+                        </tr>
+                        <tr>
+                            <td><span class="code-inline">500</span></td>
+                            <td>Server Error</td>
+                            <td>Something went wrong on our end. Contact support.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+
+        <!-- Footer -->
+        <footer class="page-footer">
+            <div class="footer-content">
+                <div>
+                    <div class="footer-brand">AlgoWorkout</div>
+                    <p class="footer-description">Institutional-grade strategy validation. Powered by The Strategy
+                        Grinder — a 7-stage Multi-LLM kill pipeline.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Platform</h4>
+                    <ul>
+                        <li><a href="../../index.html#engine">The Engine</a></li>
+                        <li><a href="../platform/services.html">Services</a></li>
+                        <li><a href="../platform/access-levels.html">Access Levels</a></li>
+                        <li><a href="../platform/survivors.html">Survivors</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="api-docs.html">API Docs</a></li>
+                        <li><a href="kill-reports.html">Kill Reports</a></li>
+                        <li><a href="graveyard.html">The Graveyard</a></li>
+                        <li><a href="support.html">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="../company/about.html">About</a></li>
+                        <li><a href="../company/contact.html">Contact</a></li>
+                        <li><a href="../company/privacy.html">Privacy</a></li>
+                        <li><a href="../company/terms.html">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>© 2026 AlgoWorkout. All rights reserved.</div>
+                <div>Powered by The Strategy Grinder 🔥</div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

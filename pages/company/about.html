@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="About AlgoWorkout — the origin story, philosophy, and mission behind the 7-stage kill pipeline for quantitative trading strategies.">
+    <title>About — AlgoWorkout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/pages.css">
+</head>
+
+<body>
+    <div class="page-container">
+        <!-- Header -->
+        <header class="page-header">
+            <a href="../../index.html" class="page-header__logo">AlgoWorkout</a>
+            <nav class="page-header__nav">
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="privacy.html">Privacy</a>
+                <a href="terms.html">Terms</a>
+                <a href="../../index.html" class="page-header__back">← Home</a>
+            </nav>
+        </header>
+
+        <div class="page-content page-content--narrow">
+            <!-- Hero -->
+            <section class="page-hero">
+                <span class="page-hero__tag">Our Story</span>
+                <h1 class="page-hero__title">About AlgoWorkout</h1>
+                <p class="page-hero__subtitle">Built by a quant developer who got tired of backtests that looked great
+                    on paper but failed in live trading.</p>
+            </section>
+
+            <!-- Origin Story -->
+            <section class="page-section">
+                <h2 class="page-section__title">The Origin Story</h2>
+                <p class="page-section__subtitle">The problem was always the same: overfitting. You optimize a strategy
+                    until it produces a beautiful equity curve on historical data, deploy it with real capital, and
+                    watch it bleed. The backtest was fitting to noise, not signal.</p>
+                <p class="page-section__subtitle">The insight was counterintuitive: instead of optimizing until
+                    profitable, <strong style="color: var(--text);">destroy the strategy with tests</strong>. If it
+                    survives, it might be real. If it breaks under adversarial pressure, hostile market scenarios, and
+                    out-of-sample validation — it was never a real edge in the first place.</p>
+                <p class="page-section__subtitle">That's how The Strategy Grinder was born. A pipeline that generates
+                    hundreds of strategies and then ruthlessly kills them.</p>
+            </section>
+
+            <!-- Philosophy -->
+            <section class="page-section">
+                <h2 class="page-section__title">Kill Until Only Real Edges Survive</h2>
+                <p class="page-section__subtitle">The old way: generate one strategy, optimize it until the backtest
+                    looks amazing, convince yourself it works, deploy, lose money. This is curve fitting disguised as
+                    research.</p>
+                <p class="page-section__subtitle">Our way: generate many strategies, then subject each one to 3
+                    automated kill gates plus adversarial AI interrogation. Only the top 2–4% survive. We're not looking
+                    for strategies that look good — we're looking for strategies we can't kill.</p>
+                <p class="page-section__subtitle">This is the scientific method applied to trading. The hypothesis must
+                    survive the experiment, not the other way around.</p>
+            </section>
+
+            <!-- Why Multi-LLM -->
+            <section class="page-section">
+                <h2 class="page-section__title">Why Multi-LLM?</h2>
+                <p class="page-section__subtitle">Using a single AI model creates systematic bias. If one model has a
+                    blind spot — say, it consistently underestimates regime risk — every strategy it evaluates inherits
+                    that blind spot.</p>
+                <p class="page-section__subtitle">Our pipeline uses 4 different LLM providers for different stages:
+                    OpenAI o3 for hypothesis generation and implementation, DeepSeek Reasoner for adversarial critique,
+                    Google Gemini for stress test analysis, and Anthropic Claude for supplementary evaluation. Cognitive
+                    diversity reduces the risk of correlated failures.</p>
+            </section>
+
+            <!-- The Numbers -->
+            <section class="page-section">
+                <h2 class="page-section__title">The Numbers</h2>
+                <div class="page-stats">
+                    <div class="page-stat">
+                        <div class="page-stat__value page-stat__value--primary">7</div>
+                        <div class="page-stat__label">Pipeline Stages</div>
+                    </div>
+                    <div class="page-stat">
+                        <div class="page-stat__value page-stat__value--danger">3</div>
+                        <div class="page-stat__label">Automated Kill Gates</div>
+                    </div>
+                    <div class="page-stat">
+                        <div class="page-stat__value page-stat__value--primary">4</div>
+                        <div class="page-stat__label">LLM Providers</div>
+                    </div>
+                    <div class="page-stat">
+                        <div class="page-stat__value page-stat__value--primary">5</div>
+                        <div class="page-stat__label">Stress Scenarios</div>
+                    </div>
+                    <div class="page-stat">
+                        <div class="page-stat__value page-stat__value--danger">2–4%</div>
+                        <div class="page-stat__label">Survival Rate</div>
+                    </div>
+                    <div class="page-stat">
+                        <div class="page-stat__value page-stat__value--primary">~1,954</div>
+                        <div class="page-stat__label">Lines of Pipeline Code</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Mission -->
+            <section class="page-section">
+                <h2 class="page-section__title">Mission</h2>
+                <p class="page-section__subtitle">Make institutional-grade strategy validation accessible to individual
+                    traders and small teams. Transparency, rigor, and education over hype. Every decision is recorded.
+                    Every kill is explained. Every survivor earns its place.</p>
+            </section>
+
+            <!-- Open Source -->
+            <section class="page-section">
+                <h2 class="page-section__title">Open Source Roots</h2>
+                <p class="page-section__subtitle">The Strategy Grinder is built with Python, pandas, numpy, and
+                    open-source LLM APIs. The pipeline orchestrates ~1,954 lines of code across 15 files. Kill gates are
+                    configurable via <span class="code-inline">config.yaml</span>. Every strategy gets a structured
+                    <span class="code-inline">manifest.yaml</span> audit trail. Keep it honest. Keep it open.</p>
+            </section>
+        </div>
+
+        <!-- Footer -->
+        <footer class="page-footer">
+            <div class="footer-content">
+                <div>
+                    <div class="footer-brand">AlgoWorkout</div>
+                    <p class="footer-description">Institutional-grade strategy validation. Powered by The Strategy
+                        Grinder — a 7-stage Multi-LLM kill pipeline.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Platform</h4>
+                    <ul>
+                        <li><a href="../../index.html#engine">The Engine</a></li>
+                        <li><a href="../platform/services.html">Services</a></li>
+                        <li><a href="../platform/access-levels.html">Access Levels</a></li>
+                        <li><a href="../platform/survivors.html">Survivors</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="../resources/api-docs.html">API Docs</a></li>
+                        <li><a href="../resources/kill-reports.html">Kill Reports</a></li>
+                        <li><a href="../resources/graveyard.html">The Graveyard</a></li>
+                        <li><a href="../resources/support.html">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy.html">Privacy</a></li>
+                        <li><a href="terms.html">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>© 2026 AlgoWorkout. All rights reserved.</div>
+                <div>Powered by The Strategy Grinder 🔥</div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
